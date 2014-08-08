@@ -5,48 +5,49 @@
 
 // Base class
 .panel {
-  margin-bottom: @line-height-computed;
-  background-color: @panel-bg;
-  border: 1px solid transparent;
-  border-radius: @panel-border-radius;
-  .box-shadow(0 1px 1px rgba(0,0,0,.05));
+	margin-bottom: @line-height-computed;
+	background-color: @panel-bg;
+	border: 1px solid transparent;
+	//border-radius: @panel-border-radius;
+	//.box-shadow(0 1px 1px rgba(0,0,0,.05));
 }
 
 // Panel contents
 .panel-body {
-  padding: @panel-body-padding;
-  &:extend(.clearfix all);
+	padding: @panel-body-padding;
+	&:extend(.clearfix all);
 }
 
 // Optional heading
 .panel-heading {
-  padding: @panel-heading-padding;
-  border-bottom: 1px solid transparent;
-  .border-top-radius((@panel-border-radius - 1));
+	padding: @panel-heading-padding;
+	border-bottom: 1px solid transparent;
+	//.border-top-radius((@panel-border-radius - 1));
 
-  > .dropdown .dropdown-toggle {
-    color: inherit;
-  }
+	> .dropdown .dropdown-toggle {
+		color: inherit;
+	}
 }
+
 
 // Within heading, strip any `h*` tag of its default margins for spacing.
 .panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: ceil((@font-size-base * 1.125));
-  color: inherit;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: ceil((@font-size-base * 1.125));
+	color: inherit;
 
-  > a {
-    color: inherit;
-  }
+	> a {
+		color: inherit;
+	}
 }
 
 // Optional footer (stays gray in every modifier class)
 .panel-footer {
-  padding: @panel-footer-padding;
-  background-color: @panel-footer-bg;
-  border-top: 1px solid @panel-inner-border;
-  .border-bottom-radius((@panel-border-radius - 1));
+	padding: @panel-footer-padding;
+	background-color: @panel-footer-bg;
+	border-top: 1px solid @panel-inner-border;
+	//.border-bottom-radius((@panel-border-radius - 1));
 }
 
 
@@ -56,38 +57,38 @@
 // any kind of custom content between the two.
 
 .panel {
-  > .list-group {
-    margin-bottom: 0;
+	> .list-group {
+		margin-bottom: 0;
 
-    .list-group-item {
-      border-width: 1px 0;
-      border-radius: 0;
-    }
+		.list-group-item {
+			border-width: 1px 0;
+			border-radius: 0;
+		}
 
-    // Add border top radius for first one
-    &:first-child {
-      .list-group-item:first-child {
-        border-top: 0;
-        .border-top-radius((@panel-border-radius - 1));
-      }
-    }
-    // Add border bottom radius for last one
-    &:last-child {
-      .list-group-item:last-child {
-        border-bottom: 0;
-        .border-bottom-radius((@panel-border-radius - 1));
-      }
-    }
-  }
+		// Add border top radius for first one
+		&:first-child {
+			.list-group-item:first-child {
+				border-top: 0;
+				.border-top-radius((@panel-border-radius - 1));
+			}
+		}
+		// Add border bottom radius for last one
+		&:last-child {
+			.list-group-item:last-child {
+				border-bottom: 0;
+				.border-bottom-radius((@panel-border-radius - 1));
+			}
+		}
+	}
 }
 // Collapse space between when there's no additional content.
 .panel-heading + .list-group {
-  .list-group-item:first-child {
-    border-top-width: 0;
-  }
+	.list-group-item:first-child {
+		border-top-width: 0;
+	}
 }
 .list-group + .panel-footer {
-  border-top-width: 0;
+	border-top-width: 0;
 }
 
 // Tables in panels
@@ -96,97 +97,97 @@
 // watch it go full width.
 
 .panel {
-  > .table,
-  > .table-responsive > .table,
-  > .panel-collapse > .table {
-    margin-bottom: 0;
-  }
-  // Add border top radius for first one
-  > .table:first-child,
-  > .table-responsive:first-child > .table:first-child {
-    .border-top-radius((@panel-border-radius - 1));
+	> .table,
+	> .table-responsive > .table,
+	> .panel-collapse > .table {
+		margin-bottom: 0;
+	}
+	// Add border top radius for first one
+	> .table:first-child,
+	> .table-responsive:first-child > .table:first-child {
+		.border-top-radius((@panel-border-radius - 1));
 
-    > thead:first-child,
-    > tbody:first-child {
-      > tr:first-child {
-        td:first-child,
-        th:first-child {
-          border-top-left-radius: (@panel-border-radius - 1);
-        }
-        td:last-child,
-        th:last-child {
-          border-top-right-radius: (@panel-border-radius - 1);
-        }
-      }
-    }
-  }
-  // Add border bottom radius for last one
-  > .table:last-child,
-  > .table-responsive:last-child > .table:last-child {
-    .border-bottom-radius((@panel-border-radius - 1));
+		> thead:first-child,
+		> tbody:first-child {
+			> tr:first-child {
+				td:first-child,
+				th:first-child {
+					border-top-left-radius: (@panel-border-radius - 1);
+				}
+				td:last-child,
+				th:last-child {
+					border-top-right-radius: (@panel-border-radius - 1);
+				}
+			}
+		}
+	}
+	// Add border bottom radius for last one
+	> .table:last-child,
+	> .table-responsive:last-child > .table:last-child {
+		.border-bottom-radius((@panel-border-radius - 1));
 
-    > tbody:last-child,
-    > tfoot:last-child {
-      > tr:last-child {
-        td:first-child,
-        th:first-child {
-          border-bottom-left-radius: (@panel-border-radius - 1);
-        }
-        td:last-child,
-        th:last-child {
-          border-bottom-right-radius: (@panel-border-radius - 1);
-        }
-      }
-    }
-  }
-  > .panel-body + .table,
-  > .panel-body + .table-responsive {
-    border-top: 1px solid @table-border-color;
-  }
-  > .table > tbody:first-child > tr:first-child th,
-  > .table > tbody:first-child > tr:first-child td {
-    border-top: 0;
-  }
-  > .table-bordered,
-  > .table-responsive > .table-bordered {
-    border: 0;
-    > thead,
-    > tbody,
-    > tfoot {
-      > tr {
-        > th:first-child,
-        > td:first-child {
-          border-left: 0;
-        }
-        > th:last-child,
-        > td:last-child {
-          border-right: 0;
-        }
-      }
-    }
-    > thead,
-    > tbody {
-      > tr:first-child {
-        > td,
-        > th {
-          border-bottom: 0;
-        }
-      }
-    }
-    > tbody,
-    > tfoot {
-      > tr:last-child {
-        > td,
-        > th {
-          border-bottom: 0;
-        }
-      }
-    }
-  }
-  > .table-responsive {
-    border: 0;
-    margin-bottom: 0;
-  }
+		> tbody:last-child,
+		> tfoot:last-child {
+			> tr:last-child {
+				td:first-child,
+				th:first-child {
+					border-bottom-left-radius: (@panel-border-radius - 1);
+				}
+				td:last-child,
+				th:last-child {
+					border-bottom-right-radius: (@panel-border-radius - 1);
+				}
+			}
+		}
+	}
+	> .panel-body + .table,
+	> .panel-body + .table-responsive {
+		border-top: 1px solid @table-border-color;
+	}
+	> .table > tbody:first-child > tr:first-child th,
+	> .table > tbody:first-child > tr:first-child td {
+		border-top: 0;
+	}
+	> .table-bordered,
+	> .table-responsive > .table-bordered {
+		border: 0;
+		> thead,
+		> tbody,
+		> tfoot {
+			> tr {
+				> th:first-child,
+				> td:first-child {
+					border-left: 0;
+				}
+				> th:last-child,
+				> td:last-child {
+					border-right: 0;
+				}
+			}
+		}
+		> thead,
+		> tbody {
+			> tr:first-child {
+				> td,
+				> th {
+					border-bottom: 0;
+				}
+			}
+		}
+		> tbody,
+		> tfoot {
+			> tr:last-child {
+				> td,
+				> th {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+	> .table-responsive {
+		border: 0;
+		margin-bottom: 0;
+	}
 }
 
 
@@ -196,48 +197,95 @@
 // the help of our collapse JavaScript plugin.
 
 .panel-group {
-  margin-bottom: @line-height-computed;
+	margin-bottom: @line-height-computed;
+	
+	border-top: 1px solid @panel-inner-border;
 
-  // Tighten up margin so it's only between panels
-  .panel {
-    margin-bottom: 0;
-    border-radius: @panel-border-radius;
-    + .panel {
-      margin-top: 5px;
-    }
-  }
+	// Tighten up margin so it's only between panels
+	.panel {
+		margin-bottom: 0;
+		//border-radius: @panel-border-radius;
+		+ .panel {
+			///margin-top: 5px;
+		}
+	}
 
-  .panel-heading {
-    border-bottom: 0;
-    + .panel-collapse > .panel-body {
-      border-top: 1px solid @panel-inner-border;
-    }
-  }
-  .panel-footer {
-    border-top: 0;
-    + .panel-collapse .panel-body {
-      border-bottom: 1px solid @panel-inner-border;
-    }
-  }
+	.panel-heading {
+		border-bottom: 0;
+		border-top: 1px solid @panel-inner-border;
+		padding:		10px 20px;
+		+ .panel-collapse > .panel-body {
+			
+		}
+		& > .panel-title {
+			& > a {
+				outline: 				0;
+				color:					@panel-heading-text-active;
+				background-position:	right center;
+				background-repeat:		no-repeat;
+				font-weight:			bold;
+				font-size:				13px;
+				line-height:			16px;	// Height of the icon!
+				// (-) image, encoded in base64. Should be replaced with the proper transparent PNG version (no access to PSD right now)
+				// Encoded using http://www.base64-image.de/
+				background-image:		url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDgvMDYvMTQWLwODAAABdElEQVQ4ja2Tv0sCcRjGP3cqHtwhpdxiQyJBKMSBs2JD0OZmQauz9LdEs2uQo1vQkOgsHIHSkNhyDZcWcsLFeV3DdXaRmFHP+OV5nu/743kFz/M8QjBMh45u0R/aTKYuAMlEhHxWoqQppNVYmI4QGMxdj+b1C+2exRfHMBkoFxSODjaIRoRPg7nrcXZpcvfwCkBRkylq8uI3w3To6jO6+gyA3e04p8cq0YjgG1xcPXPTs0jIIrVKilxGWlrBYGTTaI2Zzt7YLyicHG4iGqZDu2cBrBQD5DIStUoKgHbPwjAdxI7u91zU5JXisElRk/GAjm4h9of2ou91EXD7Q5tosKpgYOdNk9t7e6lwb0eiXlUX3MnURfzGEtYoIbTnaDIR4XE8xzAdsltx6lX1R73x5AB+wMR81h9csON1EHDzWQmxpCkIH4+D0fLewxiMbLr6DAEoaQpiWo1RLigANFrjlSZBkMCPdFqN/VOU4Y/HFCb99pzfAUjUye4FDnFCAAAAAElFTkSuQmCC');
+				display:				block;
+				text-decoration:		none;
+				
+				&.collapsed {
+					color:				@panel-heading-text;
+					// (+) image, encoded in base64. Should be replaced with the proper transparent PNG version (no access to PSD right now)
+					// Encoded using http://www.base64-image.de/
+					background-image:	url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDgvMDYvMTQWLwODAAABnklEQVQ4ja2TP0gbURzHP++4saI41HaoVJL0yHz0Qg6VdDSgRQ0Fl+LQqXTt2Klj19LJoXQpiH9QIY6KKe/IhZvDNQkdc3cFUex48Docp3dNBov+tvfj+77f73u/708opRSZGgYh0vXo+n3OLy4BmJ6apGwUsS2Tx49msnBEShDHMXtHx7ScDv9w3oCFYKH6nLXlJXRdvyGI45gvW9/4OfgFgF0xE7WZh4mrMEK6HrLtAfCsMMfbN6/RdT0h2N4/4ky6TEw8YHOjgVEqjHXg9wZ8/b7D1dUfFm2LV6vLaMMgpOV0AEYu7xw02T1sXp+NUoHNjQYALafDMAjRpOuhlMKumCPKpz8cTlpOrmeUCtgVE6UU0vXQun4/ebdljrU9rlJs1++jp6NKP2z3sDmi+u79BwBq81UaL+vX2POLS7Rby2YqO2V9emqSIPrNMIx4OvuE9ZU66yv1nPLnTx9zBEEUAUnAtLJRBEC63q0dpNiyUUSzLRMhBLLt4fcGOWBtvsqLhWqu5/cGyLaHEALbMu8epPuJMtxxmbKg/13nv7eY6oONLxW5AAAAAElFTkSuQmCC');
+				}
+				&:hover {
+					text-decoration:	none;
+				}
+			}
+		}
+	}
+	.panel-footer {
+		border-top: 0;
+		+ .panel-collapse .panel-body {
+			//border-bottom: 1px solid @panel-inner-border;
+		}
+	}
+	
+	
+	
+	// Remove the border-top on the first accordion panel
+	& > .panel-accordion:first-child {
+		& > .panel-heading {
+			border-top: 0;
+		}
+	}
 }
 
 
+
+/*
+.panel-accordion {
+	& > .panel-heading {
+		border-bottom:	2px solid #ffcc00;
+	}
+}
+*/
 // Contextual variations
 .panel-default {
-  .panel-variant(@panel-default-border; @panel-default-text; @panel-default-heading-bg; @panel-default-border);
+	.panel-variant(@panel-default-border; @panel-default-text; @panel-default-heading-bg; @panel-default-border);
 }
 .panel-primary {
-  .panel-variant(@panel-primary-border; @panel-primary-text; @panel-primary-heading-bg; @panel-primary-border);
+	.panel-variant(@panel-primary-border; @panel-primary-text; @panel-primary-heading-bg; @panel-primary-border);
 }
 .panel-success {
-  .panel-variant(@panel-success-border; @panel-success-text; @panel-success-heading-bg; @panel-success-border);
+	.panel-variant(@panel-success-border; @panel-success-text; @panel-success-heading-bg; @panel-success-border);
 }
 .panel-info {
-  .panel-variant(@panel-info-border; @panel-info-text; @panel-info-heading-bg; @panel-info-border);
+	.panel-variant(@panel-info-border; @panel-info-text; @panel-info-heading-bg; @panel-info-border);
 }
 .panel-warning {
-  .panel-variant(@panel-warning-border; @panel-warning-text; @panel-warning-heading-bg; @panel-warning-border);
+	.panel-variant(@panel-warning-border; @panel-warning-text; @panel-warning-heading-bg; @panel-warning-border);
 }
 .panel-danger {
-  .panel-variant(@panel-danger-border; @panel-danger-text; @panel-danger-heading-bg; @panel-danger-border);
+	.panel-variant(@panel-danger-border; @panel-danger-text; @panel-danger-heading-bg; @panel-danger-border);
 }

@@ -60,6 +60,9 @@
 .btn-primary {
   .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
 }
+.btn-secondary {
+  .button-variant(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+}
 // Success appears as green
 .btn-success {
   .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
@@ -154,4 +157,54 @@ input[type="button"] {
   &.btn-block {
     width: 100%;
   }
+}
+
+
+.btn-switch {
+	
+	@width:		62px;
+	@height:	28px;
+	@overflow:	3px;
+	@transitionTime:	0.05s;
+	@transitionType:	linear;
+	
+	display:				inline-block;
+	position:				relative;
+	width:					@width + ( @overflow * 2 );
+	height:					@height + ( @overflow * 2 );
+	cursor:					pointer;
+	
+	& > .bg {
+		position:			absolute;
+		margin:				@overflow;
+		border-radius: 		@height / 2;
+		background-color:	#919CA4;
+		width:				@width;
+		height:				@height;
+		.box-shadow(inset 0 2px 3px rgba(0,0,0,.3));
+	}
+	& > .handle {
+		-webkit-transition: 	@transitionTime @transitionType;
+		-moz-transition: 		@transitionTime @transitionType;
+		-o-transition: 			@transitionTime @transitionType;
+		transition: 			@transitionTime @transitionType;
+		position:			absolute;
+		left:				0;
+		background-color:	#EBEEF0;
+		border-radius: 		50%;
+		width:				@height + ( @overflow * 2 );
+		height:				@height + ( @overflow * 2 );
+		.box-shadow(0 1px 1px rgba(0,0,0,.3));
+		#gradient > .vertical(@start-color: #fff; @end-color: #ECEEF0);
+  		.reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+	}
+	
+	&.active {
+		& > .bg {
+			background-color:#42C964;
+		}
+		& > .handle {
+			left:			@width - ( @height + ( @overflow ) );
+		}
+	}
 }

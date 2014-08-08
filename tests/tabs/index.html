@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>Pagevamp Bootstrap - Tabs</title>
+		<meta charset="UTF-8">
+		<link href="../../bootstrap/less/bootstrap.less" rel="stylesheet/less" type="text/css" />
+		<script>
+			less = {
+				logLevel: 1,	// errors only
+				poll: 1000
+			};
+		</script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../../bootstrap/dist/js/bootstrap.js"></script>
+	</head>
+	<body>
+		
+		<!-- Regular -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li>
+				<a href="#">
+					Home
+				</a>
+			</li>
+			<li class="active">
+				<a href="#">
+					Search
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					Emails
+				</a>
+			</li>
+		</ul>
+		
+		<div style="height:40px;"></div>
+		
+		<!-- With icons -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li>
+				<a href="#">
+					<span class="glyphicon glyphicon-star"></span>
+					Home
+				</a>
+			</li>
+			<li class="active">
+				<a href="#">
+					<span class="glyphicon glyphicon-search"></span>
+					Search
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="glyphicon glyphicon-envelope"></span>
+					Emails
+				</a>
+			</li>
+		</ul>
+		
+		<div style="height:40px;"></div>
+		
+		<!-- Block, with icons (new style .nav-block) -->
+		<ul class="nav nav-tabs nav-block" role="tablist">
+			<li>
+				<a href="#">
+					<span class="glyphicon glyphicon-star"></span>
+					Home
+				</a>
+			</li>
+			<li class="active">
+				<a href="#">
+					<span class="glyphicon glyphicon-search"></span>
+					Search
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="glyphicon glyphicon-envelope"></span>
+					Emails
+				</a>
+			</li>
+		</ul>
+		
+		<div style="height:40px;"></div>
+		
+		<!-- Block, with icons (new style .nav-table and nav-cols-3) -->
+		<!-- .nav-table and .nav-cols-x (x in [1;12]) are new classnames, they make the tab take 100% of the available width, with equal width for each cell. -->
+		<ul class="nav nav-tabs nav-block nav-table nav-cols-3" role="tablist" style="width:400px">
+			<li>
+				<a href="#">
+					<span class="glyphicon glyphicon-star"></span>
+					Home
+				</a>
+			</li>
+			<li class="active">
+				<a href="#">
+					<span class="glyphicon glyphicon-search"></span>
+					Search
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="glyphicon glyphicon-envelope"></span>
+					Emails
+				</a>
+			</li>
+		</ul>
+	</body>
+</html>

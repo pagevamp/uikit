@@ -25,7 +25,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#">Brand</a>
+					<a class="navbar-brand" href="#">Pagevamp</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,16 +46,13 @@
 							</ul>
 						</li>
 					</ul>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search">
-						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
-					</form>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Link</a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+							<!-- New classname 'avatar' on <a> will resize and round the corners of '& > img' and change the paddings of the 'a' element. New Bootstrap variable '@avatar-height' declared for that purpose. -->
+							<a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
+								<img src="http://fotos.starmedia.com/imagenes/2012/02/anonymous-brasil-ataca-bancos-1.jpg" />
+								<span class="caret"></span>
+							</a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="#">Action</a></li>
 								<li><a href="#">Another action</a></li>
@@ -64,6 +61,14 @@
 								<li><a href="#">Separated link</a></li>
 							</ul>
 						</li>
+					</ul>
+					
+					<form class="navbar-form navbar-right">
+						<button type="submit" class="btn btn-success">Publish</button>
+					</form>
+					
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Preview</a></li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div><!-- /.container-fluid -->

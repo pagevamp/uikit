@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title>Pagevamp Bootstrap - App Card</title>
+		<meta charset="UTF-8">
+		<link href="../../bootstrap/less/bootstrap.less" rel="stylesheet/less" type="text/css" />
+		<script>
+			less = {
+				logLevel: 	1,	// errors only
+				poll: 		1000
+			};
+		</script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.0/less.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="../../bootstrap/dist/js/bootstrap.js"></script>
+	</head>
+	<body>
+		<div class="container" style="margin-top:50px;">
+			
+			<!-- .appcard defined in media.less -->
+			<div class="appcard">
+				<img src="http://i.imgur.com/RJNTH7V.jpg" />
+				<div class="title">
+					<div class="rating">
+						<div class="star full"></div>
+						<div class="star full"></div>
+						<div class="star full"></div>
+						<div class="star half"></div>
+						<div class="star"></div>
+					</div>
+					Skype
+				</div>
+				<div class="description">
+					Short Description
+				</div>
+			</div>
+			
+			
+			<div class="appcard">
+				<img src="http://i.imgur.com/RJNTH7V.jpg" />
+				<div class="title">
+					<div class="rating">
+						<div class="star full"></div>
+						<div class="star full"></div>
+						<div class="star full"></div>
+						<div class="star half"></div>
+						<div class="star"></div>
+					</div>
+					Skype
+				</div>
+				<div class="description">
+					Short Description
+				</div>
+			</div>
+			
+			
+			<div class="appcard">
+				<img src="http://i.imgur.com/RJNTH7V.jpg" />
+				<div class="title">
+					<div class="rating">
+						<div class="star full"></div>
+						<div class="star full"></div>
+						<div class="star full"></div>
+						<div class="star half"></div>
+						<div class="star"></div>
+					</div>
+					Skype
+				</div>
+				<div class="description">
+					Short Description
+				</div>
+			</div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			$(function() {
+				
+				/* This is not production code, just a demo */
+				$('#demo').click(function() {
+					if ($(this).hasClass('active')) {
+						$(this).removeClass('active');
+					} else {
+						$(this).addClass('active');
+					}
+				});
+			});
+		</script>
+		
+	</body>
+</html>

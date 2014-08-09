@@ -54,3 +54,71 @@
   padding-left: 0;
   list-style: none;
 }
+
+
+.appcard {
+	@width:		258px;
+	@height:	293px;
+	@padding:	16px;
+	@margin:	4px;
+	@radius:	2px;
+	
+	
+	border-radius: 		@radius;
+	width:				@width;
+	height:				@height;
+	border:				1px solid #CBCBCB;
+	background-color:	#ffffff;
+	display:			inline-block;
+	margin:				@margin;
+	
+	& > img {
+		width:				100%;
+		border-radius: 		@radius;
+	}
+	& > div.title {
+		padding:		@padding @padding 4px @padding;
+		color:			#414A51;
+		font-size:		16px;
+		font-weight:	bold;
+		& > div.rating {
+			float:	right;
+		}
+	}
+	& > div.description {
+		padding:		0 @padding;
+		color:			#919CA4;
+		font-size:		13px;
+		font-weight:	regular;
+		
+	}
+}
+
+
+.rating {
+	
+	// Image is a tile (http://i.imgur.com/SChwZbL.png) containing the full, half and empty starts.
+	// Display is controlled using 'background-position'
+	// Current image has no alpha transparency, and need to be re-encoded
+	@image:			url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAOCAYAAAC7IpUCAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDgvMDgvMTT28HSwAAACKElEQVRIiaXWQU/UQBQH8P+03bYTahqg6KZlL2zkRpY7B+8eiBgO3jxwIZxM/CJ+DI5GPXkz6AfgQDjshpAUSda2YE1tbXfpeMAtrXRmW32XJvPml3l589IMmCDeHX0XpYXxP9bzPGFeAieGbor3Rz8wdFPeFm7MbBzHrW0cxwiCQGi5RX/4HFa+bWJmgiBobWdGZGuLHl2kOD2/7fDpeYrRRfNul20cx0iSpLFNkqTosMgqAJAzhqvwBt+upxhfTfDl+Gdl0+HHa2wNFvBoqYOHiwqWTBkSIWhix+MxTNOEqqpQVRWKooD8sYwxTKdTZFmGLMsQhmEjS0buL/bm0EM6YY07onUIXr1YAQCI7Ovn9+eSEIJerwcAcF0XjDU/d2al/qqGve1lyNzproYsAXvby+ivamhrAcC2bVBKQSmFbdvNYclKALC5TnGwa0GRxUiRgYNdC5vrtFhragkhcBwHhmEUa4ZhwHGcYlya2qJHG32K/R1LiPd3LGz06b31Jta27UrB5cLndfxvW7nYBwviexbl51lZ5l+FKFeXr5z01ZsI8aUgP89mWfZPubp8pehL/+7gNUfFy6eLWHPUu8J8fmF1Vtf1Yi1N+f/6ck7XdXS7XaFVKgd7EzgrHTx7YmLw+HZ2twYGjocJ3n4KhZ2us4CBKIrg+/7cojVNg2VZxeyapsm35YfIyVnC8jyvfaTc5Dk7OUu4jxiRzfOcRVHEtVEUtbK/AcdCUULkPrElAAAAAElFTkSuQmCC');
+	@tileWidth:		15px;
+	@tileHeight:	14px;
+	
+	
+	& > .star {
+		display:				table-cell;
+		background-image:		@image;
+		background-repeat:		no-repeat;
+		background-position:	(0 - @tileWidth * 2) 0;
+		width:					@tileWidth;
+		height:					@tileHeight;
+		
+		&.half {
+			background-position:	(0 - @tileWidth) 0;
+		}
+		
+		&.full {
+			background-position:	0 0;
+		}
+	}
+}

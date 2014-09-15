@@ -339,3 +339,40 @@
 	// Remove the top rounded corners here since there is a hard edge above the menu
 	.border-top-radius(0);
 }
+
+
+ul.tabs {
+	
+	list-style:			none;
+	margin:				0;
+	padding:			0;
+	
+	&.tabs-large {
+		& > li {
+			border: 			1px solid transparent;
+			border-radius:		@border-radius-base;
+			display:			inline-block;
+			vertical-align:		middle !important;
+			cursor:				pointer;
+	
+			.button-variant(@btn-tab-color; @btn-tab-bg; @btn-tab-border);
+			
+			&.active {
+				.button-variant(@btn-tab-active-color; @btn-tab-active-bg; @btn-tab-active-border);
+			}
+			
+			width:			@btn-tab-width;
+			height:			@btn-tab-height;
+			text-align:		center;
+			& > span.glyphicon {
+				display:	block;
+				width:		100%;
+				font-size:	32px;
+				margin:		18px 0 10px;
+			}
+			
+			font-size:		16px;
+			margin-right:	18px;
+		}
+	}
+}

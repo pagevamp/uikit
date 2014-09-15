@@ -35,7 +35,7 @@
 						<span class="glyphicon glyphicon-align-justify"></span>
 					</div>
 					<span class="glyphicon glyphicon-move sortlist-handle" style="cursor:move;"></span>
-					{{item.name}}
+					{{item.name}} [{{item.__index}}]
 				</div>
 			</div>
 			
@@ -90,10 +90,31 @@
 						onUpdate: 		function (evt){
 							var item = evt.item;
 							console.log("item",item);
+							$scope.applySorting();
 						}
 					});
 					
+					$scope.applySorting = function() {
+						$scope.safeApply(function() {
+							
+							var i;
+							var elements 	= element.find('.sortlist-item');
+							var l 			= elements.length;
+							
+							for (i=0;i<l;i++) {
+								$scope.bsSortlist[i].__index = i;
+								console.log($scope.bsSortlist[i], i);
+							}
+							
+							// Apply the existing sort if any
+							$scope.bsSortlist.sort(function(a,b) {
+								return a.__index - b.__index;
+							});
+						});
+					}
+					
 					$scope.$watchCollection('bsSortlist', function(oldValue, newValue) {
+						$scope.applySorting();
 						$scope.eventOnsort($scope.serialize());
 					});
 					

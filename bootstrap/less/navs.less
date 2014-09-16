@@ -358,7 +358,7 @@ ul.tabs {
 			.button-variant(@btn-tab-color; @btn-tab-bg; @btn-tab-border);
 			
 			&.active {
-				.button-variant(@btn-tab-active-color; @btn-tab-active-bg; @btn-tab-active-border);
+				.button-variant(@btn-tab-active-color; @btn-tab-active-bg; @btn-tab-active-border; 0%; 0%);
 			}
 			
 			width:			@btn-tab-width;
@@ -373,6 +373,20 @@ ul.tabs {
 			
 			font-size:		16px;
 			margin-right:	18px;
+			
+			&:last-child {
+				margin-right:	0;
+			}
 		}
+		
 	}
+}
+
+.stacked-toolbar {
+	padding:			50px 40px 55px;
+	background-color:	#ffffff;
+	border:				1px solid #D8D8D8;
+	border-radius:		3px;
+	padding:			10px;
+	margin:				-30px 40px 30px;
 }

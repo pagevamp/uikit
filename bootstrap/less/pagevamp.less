@@ -1,0 +1,222 @@
+
+.box-shadow-inset (@x: 0px, @y: 3px, @blur: 5px, @color: #000000) {
+	-webkit-box-shadow: inset @x @y @blur @color;
+	-moz-box-shadow: inset @x @y @blur @color;
+	box-shadow: inset @x @y @blur @color;
+}
+
+
+html, body {
+	height:		100%;
+	background-color:	#E9EAED;
+}
+.pagevamp-editor {
+	
+	@sidebarWidth:			270px;
+	
+	overflow:				hidden;
+	background-color:		transparent;
+	
+	& > .sidebar {
+		float:				left;
+		width:				@sidebarWidth;
+		background-color:	#ffffff;
+		height:				100%;
+		border-right:		10px solid #D9D7DF;
+	}
+	& > .content {
+		height:				100%;
+		.box-shadow-inset(1px, 1px, 15px, rgba(0,0,0,0.6));
+		margin-left:		@sidebarWidth;
+		background-color:	#F1F1F1;
+	}
+}
+
+.iframeThemeEditor {
+	width:		100%;
+	min-height:	200px;
+	border:		0;
+}
+.pagevamp-dialog {
+	
+	&.ng-enter, &.ng-leave {
+		-webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+		transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+	}
+	&.ng-enter, &.ng-leave.ng-leave-active {
+		opacity:0;
+	}
+	&.ng-leave, &.ng-enter.ng-enter-active {
+		opacity:1;
+	}
+	
+	position:	absolute;
+	position:	fixed;
+	top:		0;
+	left:		0;
+	width:		100%;
+	height:		100%;
+	& > .overlay {
+		width:		100%;
+		height:		100%;
+		background-color:	rgba(0,0,0,0.6);
+		padding:	80px 200px;
+		& > .dialog-content {
+			width:		100%;
+			height:		100%;
+			background-color:	#F3F3F3;
+			border-radius:		3px;
+			
+			/* Settings dialog */
+			&.dialog-settings {
+				& > tbody > tr > td {
+					vertical-align:	top;
+					
+					&:nth-child(1) {
+						border-right:	1px solid #E0E4E7;
+						width:			200px;
+					}
+					
+					&:nth-child(2) {
+						background-color:	#ffffff;
+						position:			relative;
+					}
+				}
+				
+				.block {
+					&.block-menu {
+						color:			#434C53;
+						font-size:		14px;
+						font-weight:	bold;
+						padding:		25px;
+						border-bottom:	1px solid #DEDEDE;
+					}
+					&.block-title {
+						color:			#363F48;
+						font-size:		20px;
+						font-weight:	bold;
+						padding:		30px;
+						background-color:	#FBFBFB;
+						border-bottom:	1px solid #DEDEDE;
+						&.with-tabs {
+							padding-bottom:	0;
+							.nav-tabs a {
+								font-size:	14px;
+								border-bottom:	0;
+							}
+						}
+					}
+					&.block-content {
+						padding:		30px;
+					}
+					&.block-footer {
+						position:		absolute;
+						bottom:			0;
+						left:			0;
+						width:			100%;
+						background-color:	#FBFBFB;
+						border-top:	1px solid #DEDEDE;
+						padding:		30px;
+					}
+					
+				}
+			}
+			&.dialog-loading {
+				background-image:		url('/static/images/loading_large.gif');
+				background-position:	center center;
+				background-repeat:		no-repeat;
+			}
+		}
+	}
+}
+
+table.table-col {
+	width:	100%;
+	& > tbody {
+		& > tr {
+			& > td {
+				vertical-align:	top;
+				.h1 {
+					margin-top:	0;
+				}
+			}
+		}
+	}
+}
+
+.no-margin {
+	margin:	0;
+}
+.col-2 {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+}
+
+
+
+
+.content-block {
+	background-color:	#ffffff;
+	border:				#D0D1D5;
+	border-radius:		3px;
+	padding:			30px;
+	margin-bottom:		20px;
+	&.thin {
+		padding:		10px 30px;
+	}
+	&.no-padding {
+		padding:		0;
+	}
+}
+
+[medium-editor] {
+	border:	1px solid 	#CCCCCC;
+	background-color:	#F2F1F5;
+	border-radius:		3px;
+	padding:			5px;
+}
+.imageUpload {
+	background-position:	center center;
+	background-repeat:		no-repeat;
+	position:				relative;
+	border:					1px solid #CCCCCC;
+	border-radius:			3px;
+}
+
+.uploadifive-queue-item {
+	background-color: 	#F5F5F5;
+	border-bottom: 		1px dotted #D5D5D5;
+	font: 				12px Arial, Helvetica, Sans-serif;
+	margin-top: 		1px;
+	padding:			2px;
+	& > .close {
+		display:	block;
+		float: 		right;
+		height: 	16px;
+		width: 		16px;
+		font-size:	12px;
+		color:		#333333;
+	}
+	.progress {
+		border: 1px solid #D0D0D0;
+		height: 3px;
+		margin-top: 5px;
+		width: 100%;
+	}
+	.progress-bar {
+		background-color: #0072BC;
+		height: 3px;
+		width: 0;
+	}
+}
+
+
+
+.pv-wizard {
+	h4 {
+		text-align:		center;
+		color:			#7E4D8A;
+		margin:			20px 0;
+	}
+}

@@ -154,59 +154,66 @@
 		}
 		&.nav-cols-2 {
 			& > li {
-				width:		100% / 2;
+				width:		50%;
 			}
 		}
 		&.nav-cols-3 {
 			& > li {
-				width:		100% / 3;
+				width:		33.333%;
 			}
 		}
 		&.nav-cols-4 {
 			& > li {
-				width:		100% / 4;
+				width:		25%;
 			}
 		}
 		&.nav-cols-5 {
 			& > li {
-				width:		100% / 5;
+				width:		20%;
 			}
 		}
 		&.nav-cols-6 {
 			& > li {
-				width:		100% / 6;
+				width:		16.66666666666667%;
 			}
 		}
 		&.nav-cols-7 {
 			& > li {
-				width:		100% / 7;
+				width:		14.28571428571429%;
 			}
 		}
 		&.nav-cols-8 {
 			& > li {
-				width:		100% / 8;
+				width:		12.5%;
 			}
 		}
-		&.nav-cols-9 {
-			& > li {
-				width:		100% / 9;
+	}
+}
+
+
+	
+// New option: nav-tabs-vertical
+.nav-tabs-vertical {
+	& > li {
+		background-color:	@btn-vtab-bg;
+		border-bottom:		1px solid @btn-vtab-border;
+		font-size:			16px;
+		& > a {
+			display:			block;
+			cursor:				pointer;
+			color:				@btn-vtab-color;
+			text-decoration:	none;
+		}
+	}
+	& > li.active {
+		background-color:	@btn-vtab-active-bg;
+		& > a {
+			color:				@btn-vtab-active-color;
+			&:hover {
+				background-color:	@btn-vtab-active-bg;
 			}
 		}
-		&.nav-cols-10 {
-			& > li {
-				width:		100% / 10;
-			}
-		}
-		&.nav-cols-11 {
-			& > li {
-				width:		100% / 11;
-			}
-		}
-		&.nav-cols-12 {
-			& > li {
-				width:		100% / 12;
-			}
-		}
+		
 	}
 }
 

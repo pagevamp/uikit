@@ -1,0 +1,139 @@
+.payment {
+	.payment-card {
+		.border-radius(5px);
+		background-color:		#F8F9F9;
+		border:					1px solid #DDE1E3;
+		padding:				25px 30px;
+		display:				table;
+		width:					100%;
+		margin-bottom:			25px;
+		
+		&.payment-add {
+			background-color:		#ffffff;
+			border:					1px dashed #CAD3EE;
+			vertical-align:			middle;
+			text-align:				center;
+		}
+		
+		& > .card-type {
+			display:	table-cell;
+			vertical-align:	middle;
+			padding:	0;
+		}
+		& > .card-info {
+			display:	table-cell;
+			vertical-align:	middle;
+			padding:	0 10px;
+		}
+		& > .card-actions {
+			display:	table-cell;
+			vertical-align:	middle;
+			text-align:	right;
+			padding:	0;
+		}
+	}
+	
+	&.card-form {
+		max-width:	550px;
+		margin:		0 auto;
+		.faded {
+			color:	#C0C0C0;
+		}
+		&>div {
+			margin-bottom: 25px;
+		}
+		
+		.input-duo {
+			input {
+				.form-control();
+				.border-radius(0);
+				float:		left;
+				width:		50%;
+			}
+			input:first-child {
+				.border-radius-custom (@input-border-radius, 0, @input-border-radius, 0);
+				border-right:		0;
+			}
+			input:last-child {
+				.border-radius-custom (0, @input-border-radius, 0, @input-border-radius);
+			}
+		}
+		
+		input[type="text"] {
+			margin-top: 4px;
+		}
+	}
+	
+	&.icon {
+		background-position:	center center;
+		background-repeat:		no-repeat;
+		&.card {
+			&.dinersClub,&.generic {
+				width:	68px;
+				height:	44px;
+				background-image:	url('@{images-path}payment/cards/64/generic_bank_64.png');
+			}
+			&.discover {
+				width:	68px;
+				height:	44px;
+				background-image:	url('@{images-path}payment/cards/64/discover_64.png');
+			}
+			&.visa {
+				width:	68px;
+				height:	44px;
+				background-image:	url('@{images-path}payment/cards/64/visa_64.png');
+			}
+			&.mastercard {
+				width:	68px;
+				height:	44px;
+				background-image:	url('@{images-path}payment/cards/64/mastercard_64.png');
+			}
+			&.americanExpress {
+				width:	68px;
+				height:	44px;
+				background-image:	url('@{images-path}payment/cards/64/amex_64.png');
+			}
+			&.paypal {
+				width:	68px;
+				height:	44px;
+				background-image:	url('@{images-path}payment/cards/64/paypal_64.png');
+			}
+		}
+	}
+	&.icon32 {
+		background-position:	center center;
+		background-repeat:		no-repeat;
+		&.card {
+			&.dinersClub,&.generic {
+				width:	32px;
+				height:	20px;
+				background-image:	url('@{images-path}payment/cards/32/generic_bank_32.png');
+			}
+			&.discover {
+				width:	32px;
+				height:	20px;
+				background-image:	url('@{images-path}payment/cards/32/discover_32.png');
+			}
+			&.visa {
+				width:	32px;
+				height:	20px;
+				background-image:	url('@{images-path}payment/cards/32/visa_32.png');
+			}
+			&.mastercard {
+				width:	32px;
+				height:	20px;
+				background-image:	url('@{images-path}payment/cards/32/mastercard_32.png');
+			}
+			&.americanExpress {
+				width:	32px;
+				height:	20px;
+				background-image:	url('@{images-path}payment/cards/32/amex_32.png');
+			}
+			&.paypal {
+				width:	32px;
+				height:	20px;
+				background-image:	url('@{images-path}payment/cards/32/paypal_32.png');
+			}
+		}
+	}
+}

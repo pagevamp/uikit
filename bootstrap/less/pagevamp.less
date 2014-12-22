@@ -56,16 +56,39 @@ html, body {
 	left:		0;
 	width:		100%;
 	height:		100%;
+	z-index:	5000;
 	& > .overlay {
 		width:		100%;
 		height:		100%;
-		background-color:	rgba(0,0,0,0.6);
-		padding:	80px 200px;
+		background-color:	rgba(0,0,0,0.7);
+		padding-top:	10%;
+		overflow:		auto;
 		& > .dialog-content {
-			width:		100%;
-			height:		100%;
-			background-color:	#F3F3F3;
+			margin:		0 auto;
+			width:		450px;
+			background-color:	#ffffff;
 			border-radius:		3px;
+			
+			.dialog-header {
+				.box-shadow(0, 1px, 2px, rgba(0,0,0,0.2));
+				background-color:	#FAFAFA;
+				padding:			20px;
+				font-size:			24px;
+				color:				#363F48;
+				text-align:			center;
+			}
+			.dialog-body {
+				padding:			20px 10px;
+			}
+			.dialog-footer {
+				vertical-align:		middle;
+				.box-shadow(0, -1px, 2px, rgba(0,0,0,0.2));
+				background-color:	#FAFAFA;
+				padding:			15px;
+				font-size:			20px;
+				color:				#363F48;
+				text-align:			right;
+			}
 			
 			/* Settings dialog */
 			&.dialog-settings {
@@ -219,4 +242,16 @@ table.table-col {
 		color:			#7E4D8A;
 		margin:			20px 0;
 	}
+}
+
+.loading-indicator {
+	background-image:		url('/static/images/loading.gif');
+	min-height:				50px;
+	
+	&.large {
+		background-image:		url('/static/images/loading_large.gif');
+		min-height:				180px;
+	}
+	background-position:	center center;
+	background-repeat:		no-repeat;
 }

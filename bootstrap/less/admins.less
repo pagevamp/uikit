@@ -1,0 +1,61 @@
+.admins {
+	.admin-profile {
+		.border-radius(5px);
+		background-color:		#F8F9F9;
+		border:					1px solid #DDE1E3;
+		display:				table;
+		width:					100%;
+		margin-bottom:			25px;
+		
+		&.active {
+			background-color:	@component-active-bg;
+			color:	#ffffff;
+			& .btn-default {
+				background-color:	#ffffff;
+				color:	#333333;
+			}
+		}
+		
+		&.admin-add {
+			padding:				13px 0;
+			background-color:		#ffffff;
+			border:					1px dashed #CAD3EE;
+			vertical-align:			middle;
+			text-align:				center;
+		}
+		
+		& > .profile-avatar {
+			width:		72px;
+			display:	table-cell;
+			vertical-align:	middle;
+			padding:	0;
+			&>img {
+				width:	100%;
+			}
+		}
+		& > .profile-details {
+			display:	table-cell;
+			vertical-align:	middle;
+			padding:	0 10px;
+		}
+		& > .profile-actions {
+			display:	table-cell;
+			vertical-align:	middle;
+			text-align:	right;
+			padding:	0;
+		}
+	}
+	
+	&.admin-form {
+		max-width:	550px;
+		margin:		0 auto;
+		
+		&>div {
+			margin-bottom: 25px;
+		}
+		
+		input[type="text"] {
+			margin-top: 4px;
+		}
+	}
+}

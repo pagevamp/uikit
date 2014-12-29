@@ -7218,6 +7218,59 @@ textarea.payment.card-form .input-duo input {
   height: 20px;
   background-image: url('../images/payment/cards/32/paypal_32.png');
 }
+.admins .admin-profile {
+  border-radius: 5px;
+  background-color: #F8F9F9;
+  border: 1px solid #DDE1E3;
+  display: table;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.admins .admin-profile.active {
+  background-color: #428bca;
+  color: #ffffff;
+}
+.admins .admin-profile.active .btn-default {
+  background-color: #ffffff;
+  color: #333333;
+}
+.admins .admin-profile.admin-add {
+  padding: 13px 0;
+  background-color: #ffffff;
+  border: 1px dashed #CAD3EE;
+  vertical-align: middle;
+  text-align: center;
+}
+.admins .admin-profile > .profile-avatar {
+  width: 72px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0;
+}
+.admins .admin-profile > .profile-avatar > img {
+  width: 100%;
+}
+.admins .admin-profile > .profile-details {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 10px;
+}
+.admins .admin-profile > .profile-actions {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+  padding: 0;
+}
+.admins.admin-form {
+  max-width: 550px;
+  margin: 0 auto;
+}
+.admins.admin-form > div {
+  margin-bottom: 25px;
+}
+.admins.admin-form input[type="text"] {
+  margin-top: 4px;
+}
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)

@@ -387,6 +387,41 @@ ul.tabs {
 		}
 		
 	}
+	
+	
+	&.tabs-medium {
+		& > li {
+			border: 			1px solid transparent;
+			border-radius:		@border-radius-base;
+			display:			inline-block;
+			vertical-align:		middle !important;
+			cursor:				pointer;
+	
+			.button-variant(@btn-tab-color; @btn-tab-bg; @btn-tab-border);
+			
+			&.active {
+				.button-variant(@btn-tab-active-color; @btn-tab-active-bg; @btn-tab-active-border; 0%; 0%);
+			}
+			
+			width:			100px;
+			height:			70px;
+			text-align:		center;
+			& > span.glyphicon {
+				display:	block;
+				width:		100%;
+				font-size:	18px;
+				margin:		14px 0 8px;
+			}
+			
+			font-size:		14px;
+			margin-right:	4px;
+			
+			&:last-child {
+				margin-right:	0;
+			}
+		}
+		
+	}
 }
 
 .stacked-toolbar {

@@ -1,0 +1,8 @@
+<span>
+	<a ng-if="!editMode" ng-click="edit()" tooltip="Edit">
+		<span ng-if="!format">{{value}}</span>
+		<span ng-if="format=='number'">{{value|number:2}}</span>
+		<span ng-if="format=='currency'">{{currency}}{{value|number:2}}</span>
+	</a>
+	<input ng-show="editMode" type="text" class="form-control" ng-model="value" placeholder="{{placeholder}}" ng-enter="save()" ng-escape="cancel()" />
+</span>

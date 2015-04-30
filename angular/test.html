@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		
+		<!-- jQuery -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<!-- AngularJS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		
+		<!-- Pagevamp UI -->
+		<script type="text/javascript" src="build/ng-pagevamp-ui.dev.latest.js"></script>
+		
+		<!-- Boostrap -->
+		<script src="../bootstrap/dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css" />
+		
+		<!-- UI Bootstrap (dependency) -->
+		<script src="dependencies/ui-bootstrap-0.12.1.min.js"></script>
+		
+	</head>
+	<body ng-app="main" ng-controller="mainCtrl">
+		
+		<div ui-dialog>
+			<span>hey!!!!!!!</span>
+		</div>
+		
+		<script type="text/javascript">
+			angular.module('main', ['pagevamp-ui']).controller('mainCtrl', ['$scope', '$location', function($scope, $location) {
+				console.log("loaded!",$scope);
+			}]);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<div>
+	<div loading ng-if="auth.loading"></div>
+	<div class="alert alert-warning" ng-if="error">
+		{{error}}
+	</div>
+	<table ng-if="!auth.loading" style="margin:0 auto;">
+		<tbody>
+			<tr>
+				<td>
+					<h3 ng-if="auth.type=='login'">Login</h3>
+					<h3 ng-if="auth.type=='register'">Register</h3>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" class="form-control" ng-model="auth.data.email" placeholder="Email" ng-enter="auth.auth()" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="password" class="form-control" ng-model="auth.data.password" placeholder="Password" ng-enter="auth.auth()" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="btn btn-primary btn-block" ng-click="auth.auth()">
+						<span ng-if="auth.type=='login'">Login</span>
+						<span ng-if="auth.type=='register'">Register</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a ng-if="auth.type=='login'" ng-click="auth.type='register'">Register</a>
+					<a ng-if="auth.type=='register'" ng-click="auth.type='login'">Login</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

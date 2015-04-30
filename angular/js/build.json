@@ -1,0 +1,46 @@
+{
+    "name": "Pagevamp UI",
+    "output": "../build",
+    "filename": "ng-pagevamp-ui.js",
+    "files": [
+        "./core.js",
+        "./filters.js",
+        "./ng-events.js",
+        "./in-place.js",
+        "./dialog.js",
+        "./on-off-switch.js"
+    ],
+    "header": "                                                                 _ _    \n _ __   __ _  __ _  _____   ____ _ _ __ ___  _ __        ___  __| | | __\n| '_ \\ / _` |/ _` |/ _ \\ \\ / / _` | '_ ` _ \\| '_ \\      / __|/ _` | |/ /\n| |_) | (_| | (_| |  __/\\ V / (_| | | | | | | |_) |  _  \\__ \\ (_| |   < \n| .__/ \\__,_|\\__, |\\___| \\_/ \\__,_|_| |_| |_| .__/  (_) |___/\\__,_|_|\\_\\\n|_|          |___/                          |_|                         ",
+    "version": {
+        "major": 0,
+        "minor": 0,
+        "build": 3
+    },
+    "upload": false,
+    "buildlog": [
+        {
+            "date": "2015-04-30T16:46:16.391Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.1"
+        },
+        {
+            "date": "2015-04-30T17:37:40.547Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.2"
+        },
+        {
+            "date": "2015-04-30T17:52:06.690Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.3"
+        }
+    ]
+}

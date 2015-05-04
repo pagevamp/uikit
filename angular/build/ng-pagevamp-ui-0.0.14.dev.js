@@ -8,18 +8,6 @@ var viewPath = "http://127.0.0.1/git/uikit/angular";ngModule.filter('capitalize'
 	}
 });
 
-ngModule.filter('parseint', function() {
-	return function(input) {
-		return parseInt(input);
-	}
-});
-
-ngModule.filter('parsefloat', function() {
-	return function(input) {
-		return parseFloat(input);
-	}
-});
-
 ngModule.filter('filtered', function() {
 	return function(items, property, query, order) {
 		if (query && query != '' && query.length>1) {
@@ -80,10 +68,6 @@ ngModule.directive('inPlace', function ($timeout) {
 				this.$apply(fn);
 			}
 		};
-		
-		if (!$scope.currency && attrs.currency) {
-			$scope.currency = attrs.currency;
-		}
 		
 		$scope.value = "";
 		$scope.editMode = false;
@@ -244,6 +228,7 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 				return true;
 			}
 			$scope.safeApply(function() {
+				console.log("attrs.type",attrs.type);
 				if (attrs.type=='binary') {
 					if ($scope.value===0) {
 						$scope.value = 1;

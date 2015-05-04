@@ -15,6 +15,10 @@ ngModule.directive('inPlace', function ($timeout) {
 			}
 		};
 		
+		if (!$scope.currency && attrs.currency) {
+			$scope.currency = attrs.currency;
+		}
+		
 		$scope.value = "";
 		$scope.editMode = false;
 		

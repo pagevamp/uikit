@@ -15,8 +15,9 @@ module.exports = function (grunt) {
 		return string.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
 	};
 
-	var fs = require('fs');
-	var path = require('path');
+	var fs			= require('fs');
+	var path		= require('path');
+	var toolset		= require('toolset');
 	var npmShrinkwrap = require('npm-shrinkwrap');
 	var generateGlyphiconsData = require('./grunt/bs-glyphicons-data-generator.js');
 	var BsLessdocParser = require('./grunt/bs-lessdoc-parser.js');
@@ -397,8 +398,8 @@ module.exports = function (grunt) {
 			}
 		}
 	});
-
-
+	
+	
 	// These plugins provide necessary tasks.
 	require('load-grunt-tasks')(grunt, { scope: 'devDependencies' });
 	require('time-grunt')(grunt);
@@ -447,7 +448,8 @@ module.exports = function (grunt) {
 	grunt.registerTask('dist-docs', 'copy:docs');
 
 	// Full distribution task.
-	grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'dist-docs']);
+	grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'dist-docs', 'cleanup_scope']);
+	grunt.registerTask('cleanup', ['cleanup_scope']);
 
 	// Default task.
 	grunt.registerTask('default', ['test', 'dist', 'build-glyphicons-data', 'build-customizer']);
@@ -480,6 +482,20 @@ module.exports = function (grunt) {
 			fs.renameSync('npm-shrinkwrap.json', dest);
 			grunt.log.writeln('File ' + dest.cyan + ' updated.');
 			done();
+		});
+	});
+	
+	grunt.registerTask('cleanup_scope', function () {
+		var done = this.async();
+		// Load the CSS file
+		toolset.file.read('dist/css/bootstrap.css', function(data) {
+			// Fix the data
+			var re		= /\.pagevamp\-theme\s\.pagevamp\-theme/g;
+			var subst	= '.pagevamp-theme'; 
+			var result	= data.replace(re, subst);
+			
+			// Save
+			toolset.file.write('dist/css/bootstrap.css', result, done);
 		});
 	});
 };

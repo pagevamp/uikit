@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="en-US" class="pagevamp-theme">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		
+		<!-- jQuery -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<!-- AngularJS -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		
+		<!-- Pagevamp UI -->
+		<script type="text/javascript" src="build/ng-pagevamp-ui.dev.latest.js"></script>
+		
+		<!-- Boostrap -->
+		<script src="../bootstrap/dist/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css" />
+		
+		<!-- UI Bootstrap (dependency) -->
+		<script src="dependencies/ui-bootstrap-0.12.1.min.js"></script>
+		
+	</head>
+	<body ng-app="main" ng-controller="mainCtrl">
+		
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="nav nav-tabs" role="tablist">
+						<li ng-class="{active:tab=='dialog'}" ng-click="tab='dialog'">
+							<a>
+								<span class="fa fa-user"></span>
+								Dialog
+							</a>
+						</li>
+						<li ng-class="{active:tab=='in-place'}" ng-click="tab='in-place'">
+							<a>
+								<span class="fa fa-user"></span>
+								In-place Editing
+							</a>
+						</li>
+						<li ng-class="{active:tab=='switch'}" ng-click="tab='switch'">
+							<a>
+								<span class="fa fa-user"></span>
+								Switch
+							</a>
+						</li>
+					</ul>
+					<div class="content-block">
+						<div ng-if="tab=='dialog'">
+							<div class="btn btn-primary" ng-click="demo.dialogVisible=true">Open the dialog</div>
+						</div>
+						<div ng-if="tab=='in-place'">
+							<table class="table table-hover">
+								<tbody>
+									<tr>
+										<td style="width:100px;">
+											Regular
+										</td>
+										<td>
+											<div in-place ng-model="demo.inplace_regular" placeholder="[Enter] to save,  [Esc] to cancel"></div>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:100px;">
+											Number
+										</td>
+										<td>
+											<div in-place ng-model="demo.inplace_number" format="number" placeholder="[Enter] to save,  [Esc] to cancel"></div>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:100px;">
+											Currency
+										</td>
+										<td>
+											<div in-place ng-model="demo.inplace_number" format="currency" currency="CAD$" placeholder="[Enter] to save,  [Esc] to cancel"></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div ng-if="tab=='switch'">
+							<table class="table table-hover">
+								<tbody>
+									<tr>
+										<td style="width:100px;">
+											Boolean
+										</td>
+										<td style="width:100px;">
+											<div on-off-switch ng-model="demo.switch_bool" on-change="demo.onSwitchChange('switch_bool')"></div>
+										</td>
+										<td style="width:100px;">
+											<div class="label label-info">
+												{{demo.switch_bool}}
+											</div>
+										</td>
+										<td>
+											<span ng-if="demo.switchChangeLog.switch_bool">
+												Changed at {{demo.switchChangeLog.switch_bool|date:'h:mm:ss a'}}
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:100px;">
+											Binary
+										</td>
+										<td style="width:100px;">
+											<div on-off-switch ng-model="demo.switch_binary" type="binary" on-change="demo.onSwitchChange('switch_binary')"></div>
+										</td>
+										<td style="width:100px;">
+											<div class="label label-info">
+												{{demo.switch_binary}}
+											</div>
+										</td>
+										<td>
+											<span ng-if="demo.switchChangeLog.switch_binary">
+												Changed at {{demo.switchChangeLog.switch_binary|date:'h:mm:ss a'}}
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:100px;">
+											Read-only
+										</td>
+										<td style="width:100px;">
+											<div on-off-switch ng-model="demo.switch_readonly" read-only="true"></div>
+										</td>
+										<td style="width:100px;">
+											<div class="label label-info">
+												{{demo.switch_readonly}}
+											</div>
+										</td>
+										<td>
+											
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div ui-dialog ng-scope="parent" visible="demo.dialogVisible">
+			<span>
+				This is a dialog!
+			</span>
+		</div>
+		
+		
+		<script type="text/javascript">
+			angular.module('main', ['pagevamp-ui']).controller('mainCtrl', ['$scope', '$location', function($scope, $location) {
+				console.log("loaded!",$scope);
+				
+				$scope.safeApply = function(fn) {
+					var phase = this.$root.$$phase;
+					if(phase == '$apply' || phase == '$digest') {
+						if(fn && (typeof(fn) === 'function')) {
+							fn();
+						}
+					} else {
+						this.$apply(fn);
+					}
+				};
+				
+				$scope.demo = {
+					dialogVisible:	false,
+					switch_bool:	true,
+					switch_binary:	1,
+					switch_readonly:true,
+					switchChangeLog:	{},
+					onSwitchChange:	function(name) {
+						$scope.safeApply(function() {
+							$scope.demo.switchChangeLog[name] = new Date();
+						});
+					},
+					inplace_regular:	'hello world',
+					inplace_number:		29.99
+				};
+				
+				$scope.tab = 'dialog';
+				
+			}]);
+		</script>
+	</body>
+</html>

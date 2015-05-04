@@ -4,6 +4,18 @@ ngModule.filter('capitalize', function() {
 	}
 });
 
+ngModule.filter('parseint', function() {
+	return function(input) {
+		return parseInt(input);
+	}
+});
+
+ngModule.filter('parsefloat', function() {
+	return function(input) {
+		return parseFloat(input);
+	}
+});
+
 ngModule.filter('filtered', function() {
 	return function(items, property, query, order) {
 		if (query && query != '' && query.length>1) {

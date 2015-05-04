@@ -15,24 +15,20 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 			}
 		};
 		
-		//console.log("passive",$scope.passive);
+		if (attrs.type=='binary') {
+			$scope.value = 0;
+		} else {
+			$scope.value = false;
+		}
 		
-		
-		
-		/*
-		$scope.$watch(function () {
-			//return ngModelController.$modelValue;
-			console.log("a",ngModelController.$modelValue);
-		}, function(newValue) {
-			console.log("b",ngModelController.$modelValue);
-		});
-		*/
-		
-		$scope.value = false;
 		
 		ngModelController.$render = function() {
 			$scope.safeApply(function() {
-				$scope.value = ngModelController.$viewValue || false;
+				if (attrs.type=='binary') {
+					$scope.value = ngModelController.$viewValue || false;
+				} else {
+					$scope.value = ngModelController.$viewValue || 0;
+				}
 			});
 		};
 		
@@ -41,16 +37,20 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 		});
 		
 		$scope.switch = function() {
-			if ($scope.passive) {
+			if ($scope.readOnly) {
 				return true;
 			}
 			$scope.safeApply(function() {
-				$scope.value = !$scope.value;
-				if ($scope.value===true) {
-					$scope.$parent.$eval(attrs.whenOn);
+				if (attrs.type=='binary') {
+					if ($scope.value===0) {
+						$scope.value = 1;
+					} else {
+						$scope.value = 0;
+					}
 				} else {
-					$scope.$parent.$eval(attrs.whenOff);
+					$scope.value = !$scope.value;
 				}
+				$scope.$parent.$eval(attrs.onChange);
 			});
 		}
 	}
@@ -59,7 +59,7 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 		replace:		true,
 		require:		"ngModel",
 		scope:			{
-			passive:	'='
+			readOnly:	'='
 		},
 		templateUrl:	viewPath+'/view/on-off-switch/on-off-switch.html'
 	};

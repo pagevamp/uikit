@@ -14,7 +14,7 @@
     "version": {
         "major": 0,
         "minor": 0,
-        "build": 13
+        "build": 19
     },
     "upload": false,
     "buildlog": [
@@ -121,6 +121,54 @@
                 "email": "julien@pagevamp.com"
             },
             "version": "0.0.13"
+        },
+        {
+            "date": "2015-05-04T16:35:02.336Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.14"
+        },
+        {
+            "date": "2015-05-04T16:45:09.857Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.15"
+        },
+        {
+            "date": "2015-05-04T16:59:41.628Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.16"
+        },
+        {
+            "date": "2015-05-04T17:01:08.448Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.17"
+        },
+        {
+            "date": "2015-05-04T17:01:47.046Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.18"
+        },
+        {
+            "date": "2015-05-04T17:12:47.447Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.19"
         }
     ]
 }

@@ -21,15 +21,20 @@
 		<script src="dependencies/ui-bootstrap-0.12.1.min.js"></script>
 		
 	</head>
-	<body ng-app="main" ng-controller="mainCtrl">
+	<body ng-app="main" ng-controller="mainCtrl" class="pagevamp-theme">
 		
-		<div ui-dialog>
-			<span>hey!!!!!!!</span>
+		<div ui-dialog ng-scope="parent" visible="testVisible">
+			<span ng-click="testVisible=!testVisible">hey: [{{testVisible}}]</span>
 		</div>
+		
+		<div class="btn btn-primary" ng-click="testVisible=true">Open</div>
 		
 		<script type="text/javascript">
 			angular.module('main', ['pagevamp-ui']).controller('mainCtrl', ['$scope', '$location', function($scope, $location) {
 				console.log("loaded!",$scope);
+				
+				$scope.testVisible = true;
+				
 			}]);
 		</script>
 	</body>

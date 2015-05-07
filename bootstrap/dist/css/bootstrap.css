@@ -2320,6 +2320,25 @@ a.pagevamp-theme .bg-danger:hover {
     border-bottom: 0;
   }
 }
+.pagevamp-theme table.ecommerce-cart th {
+  text-align: center !important;
+}
+.pagevamp-theme table.ecommerce-cart tr,
+.pagevamp-theme table.ecommerce-cart td {
+  border: 0;
+}
+.pagevamp-theme table.ecommerce-cart tr.bold td {
+  font-weight: bold;
+}
+.pagevamp-theme table.ecommerce-cart td {
+  text-align: left;
+}
+.pagevamp-theme table.ecommerce-cart tr.line-start {
+  border-top: 1px solid #ffffff;
+}
+.pagevamp-theme table.ecommerce-cart tr.line-end {
+  border-top: 1px solid #DDDDDD;
+}
 .pagevamp-theme fieldset {
   padding: 0;
   margin: 0;

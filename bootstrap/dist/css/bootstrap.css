@@ -269,6 +269,7 @@ th {
 */
   /* Force the pointer on links */
   /* Add custom classes */
+  /* Markdown container, for parsed markdown */
   /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2338,6 +2339,22 @@ a.pagevamp-theme .bg-danger:hover {
 }
 .pagevamp-theme table.ecommerce-cart tr.line-end {
   border-top: 1px solid #DDDDDD;
+}
+.pagevamp-theme table.no-margin {
+  margin: 0 !important;
+}
+.pagevamp-theme table.subtable {
+  background-color: transparent !important;
+}
+.pagevamp-theme table.subtable tr:first-child > td {
+  border-top: 0 !important;
+}
+.pagevamp-theme table.no-lines {
+  border: 0 !important;
+}
+.pagevamp-theme table.no-lines tr,
+.pagevamp-theme table.no-lines td {
+  border: 0 !important;
 }
 .pagevamp-theme fieldset {
   padding: 0;
@@ -7105,6 +7122,35 @@ button.pagevamp-theme .close {
 }
 .pagevamp-theme a[ng-click] {
   cursor: pointer;
+}
+.pagevamp-theme .markdown-container h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.pagevamp-theme .markdown-container h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.pagevamp-theme .markdown-container h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.pagevamp-theme .markdown-container h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+.pagevamp-theme .markdown-container h5 {
+  font-size: 12px;
+  font-weight: bold;
+}
+.pagevamp-theme .markdown-container h6 {
+  font-size: 10px;
+  font-weight: bold;
+}
+.pagevamp-theme .markdown-container p {
+  font-size: 12px;
+  text-align: justify;
+  margin-bottom: 3px;
 }
 .pagevamp-theme .payment .payment-card {
   border-radius: 5px;

@@ -448,8 +448,23 @@ module.exports = function (grunt) {
 	grunt.registerTask('dist-docs', 'copy:docs');
 
 	// Full distribution task.
+	
+	/*
+		 _ __   __ _  __ _  _____   ____ _ _ __ ___  _ __  
+		| '_ \ / _` |/ _` |/ _ \ \ / / _` | '_ ` _ \| '_ \ 
+		| |_) | (_| | (_| |  __/\ V / (_| | | | | | | |_) |
+		| .__/ \__,_|\__, |\___| \_/ \__,_|_| |_| |_| .__/ 
+		|_|          |___/                          |_|    
+		
+		Use:
+			- Scoped:	grunt dist --force
+			- no scope:	grunt distg --force
+	*/
 	grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'dist-docs', 'cleanup_scope']);
+	grunt.registerTask('distg', ['clean', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'dist-docs', 'unscope']);
+	
 	grunt.registerTask('cleanup', ['cleanup_scope']);
+	
 
 	// Default task.
 	grunt.registerTask('default', ['test', 'dist', 'build-glyphicons-data', 'build-customizer']);
@@ -492,6 +507,20 @@ module.exports = function (grunt) {
 			// Fix the data
 			var re		= /\.pagevamp\-theme\s\.pagevamp\-theme/g;
 			var subst	= '.pagevamp-theme'; 
+			var result	= data.replace(re, subst);
+			
+			// Save
+			toolset.file.write('dist/css/bootstrap.css', result, done);
+		});
+	});
+	
+	grunt.registerTask('unscope', function () {
+		var done = this.async();
+		// Load the CSS file
+		toolset.file.read('dist/css/bootstrap.css', function(data) {
+			// Fix the data
+			var re		= /\.pagevamp\-theme/g;
+			var subst	= ''; 
 			var result	= data.replace(re, subst);
 			
 			// Save

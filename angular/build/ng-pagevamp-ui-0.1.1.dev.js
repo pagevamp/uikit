@@ -2,9 +2,24 @@
 var ngModule = angular.module('pagevamp-ui', ['ui.bootstrap']);
 
 // The viewPath (@TODO: needs to be updated dynamically)
-var viewPath = "http://127.0.0.1/git/uikit/angular";ngModule.filter('capitalize', function() {
+if (!window.viewPath) {
+	window.viewPath = "http://localhost/git/uikit/angular";
+}
+ngModule.filter('capitalize', function() {
 	return function(input, all) {
 		return (!!input) ? input.replace(/([^\W_]+[^\s-]*) */g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) : '';
+	}
+});
+
+ngModule.filter('parseint', function() {
+	return function(input) {
+		return parseInt(input);
+	}
+});
+
+ngModule.filter('parsefloat', function() {
+	return function(input) {
+		return parseFloat(input);
 	}
 });
 
@@ -68,6 +83,10 @@ ngModule.directive('inPlace', function ($timeout) {
 				this.$apply(fn);
 			}
 		};
+		
+		if (!$scope.currency && attrs.currency) {
+			$scope.currency = attrs.currency;
+		}
 		
 		$scope.value = "";
 		$scope.editMode = false;
@@ -138,7 +157,6 @@ ngModule.directive('uiDialog', ['$compile', function ($compile) {
 		switch (attrs.ngScope) {
 			case "parent":
 				$scope = scope.$parent;
-				console.log("parent",scope.$parent);
 			break;
 			default:
 				$scope = scope.ngScope;
@@ -210,11 +228,12 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 		
 		
 		ngModelController.$render = function() {
+			console.log("$render", ngModelController.$viewValue);
 			$scope.safeApply(function() {
 				if (attrs.type=='binary') {
-					$scope.value = ngModelController.$viewValue || false;
-				} else {
 					$scope.value = ngModelController.$viewValue || 0;
+				} else {
+					$scope.value = ngModelController.$viewValue || false;
 				}
 			});
 		};
@@ -228,9 +247,8 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 				return true;
 			}
 			$scope.safeApply(function() {
-				console.log("attrs.type",attrs.type);
 				if (attrs.type=='binary') {
-					if ($scope.value===0) {
+					if ($scope.value*1===1) {
 						$scope.value = 1;
 					} else {
 						$scope.value = 0;

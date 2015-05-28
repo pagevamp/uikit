@@ -20,7 +20,6 @@ ngModule.directive('uiDialog', ['$compile', function ($compile) {
 		switch (attrs.ngScope) {
 			case "parent":
 				$scope = scope.$parent;
-				console.log("parent",scope.$parent);
 			break;
 			default:
 				$scope = scope.ngScope;

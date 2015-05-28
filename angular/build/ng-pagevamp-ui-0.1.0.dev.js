@@ -8,6 +8,18 @@ var viewPath = "http://127.0.0.1/git/uikit/angular";ngModule.filter('capitalize'
 	}
 });
 
+ngModule.filter('parseint', function() {
+	return function(input) {
+		return parseInt(input);
+	}
+});
+
+ngModule.filter('parsefloat', function() {
+	return function(input) {
+		return parseFloat(input);
+	}
+});
+
 ngModule.filter('filtered', function() {
 	return function(items, property, query, order) {
 		if (query && query != '' && query.length>1) {
@@ -69,7 +81,9 @@ ngModule.directive('inPlace', function ($timeout) {
 			}
 		};
 		
-		console.log("Currency", $scope.currency, attrs.currency);
+		if (!$scope.currency && attrs.currency) {
+			$scope.currency = attrs.currency;
+		}
 		
 		$scope.value = "";
 		$scope.editMode = false;
@@ -140,7 +154,6 @@ ngModule.directive('uiDialog', ['$compile', function ($compile) {
 		switch (attrs.ngScope) {
 			case "parent":
 				$scope = scope.$parent;
-				console.log("parent",scope.$parent);
 			break;
 			default:
 				$scope = scope.ngScope;
@@ -212,11 +225,12 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 		
 		
 		ngModelController.$render = function() {
+			console.log("$render", ngModelController.$viewValue);
 			$scope.safeApply(function() {
 				if (attrs.type=='binary') {
-					$scope.value = ngModelController.$viewValue || false;
-				} else {
 					$scope.value = ngModelController.$viewValue || 0;
+				} else {
+					$scope.value = ngModelController.$viewValue || false;
 				}
 			});
 		};
@@ -231,7 +245,7 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 			}
 			$scope.safeApply(function() {
 				if (attrs.type=='binary') {
-					if ($scope.value===0) {
+					if ($scope.value*1===1) {
 						$scope.value = 1;
 					} else {
 						$scope.value = 0;

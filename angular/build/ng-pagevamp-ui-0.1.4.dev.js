@@ -2,9 +2,24 @@
 var ngModule = angular.module('pagevamp-ui', ['ui.bootstrap']);
 
 // The viewPath (@TODO: needs to be updated dynamically)
-var viewPath = "http://127.0.0.1/git/uikit/angular";ngModule.filter('capitalize', function() {
+if (!window.viewPath) {
+	window.viewPath = "http://localhost/git/uikit/angular";
+}
+ngModule.filter('capitalize', function() {
 	return function(input, all) {
 		return (!!input) ? input.replace(/([^\W_]+[^\s-]*) */g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}) : '';
+	}
+});
+
+ngModule.filter('parseint', function() {
+	return function(input) {
+		return parseInt(input);
+	}
+});
+
+ngModule.filter('parsefloat', function() {
+	return function(input) {
+		return parseFloat(input);
 	}
 });
 
@@ -68,6 +83,10 @@ ngModule.directive('inPlace', function ($timeout) {
 				this.$apply(fn);
 			}
 		};
+		
+		if (!$scope.currency && attrs.currency) {
+			$scope.currency = attrs.currency;
+		}
 		
 		$scope.value = "";
 		$scope.editMode = false;
@@ -138,7 +157,6 @@ ngModule.directive('uiDialog', ['$compile', function ($compile) {
 		switch (attrs.ngScope) {
 			case "parent":
 				$scope = scope.$parent;
-				console.log("parent",scope.$parent);
 			break;
 			default:
 				$scope = scope.ngScope;
@@ -202,25 +220,73 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 			}
 		};
 		
-		if (attrs.type=='binary') {
-			$scope.value = 0;
-		} else {
-			$scope.value = false;
+		
+		/*
+			
+			- Internal $scope.value remains a boolean at all time
+			- ngModelController keeps its type: Bool or int
+			
+		*/
+		
+		//console.log("ngModelController", ngModelController.$viewValue, attrs.type);
+		
+		ngModelController.$render = function() {
+			//console.log("$render", ngModelController.$viewValue, attrs.type);
+			if (attrs.type=='binary') {
+				$scope.value = parseInt(ngModelController.$viewValue)==1;
+			} else {
+				$scope.value = ngModelController.$viewValue || ngModelController.$viewValue === 'true';
+			}
+			console.log("$scope.value",$scope.value, element);
+		};
+		
+		
+		$scope.switch = function() {
+			// No action/change for read-only
+			if ($scope.readOnly) {
+				return true;
+			}
+			$scope.safeApply(function() {
+				// Update the internal value
+				$scope.value = !$scope.value;
+				
+				// Setup the return format
+				if (attrs.type=='binary') {
+					ngModelController.$setViewValue($scope.value?1:0);
+				} else {
+					ngModelController.$setViewValue($scope.value?true:false);
+				}
+				
+				// Execute the callback
+				$scope.$parent.$eval(attrs.onChange);
+			});
 		}
 		
 		
+		/*
+		
+		// Setup the initial value
+	
+		
+		console.log("$scope.value",$scope.value);
+		
+		*/
+		/*
 		ngModelController.$render = function() {
 			$scope.safeApply(function() {
 				if (attrs.type=='binary') {
-					$scope.value = ngModelController.$viewValue || false;
-				} else {
 					$scope.value = ngModelController.$viewValue || 0;
+				} else {
+					$scope.value = ngModelController.$viewValue || false;
 				}
 			});
 		};
 		
 		$scope.$watch("value", function(a,b) {
-			ngModelController.$setViewValue(a);
+			console.log("$watch",$scope.value);
+			if ($scope.value===true) {
+				ngModelController.$setViewValue($scope.value);
+			}
 		});
 		
 		$scope.switch = function() {
@@ -228,9 +294,8 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 				return true;
 			}
 			$scope.safeApply(function() {
-				console.log("attrs.type",attrs.type);
 				if (attrs.type=='binary') {
-					if ($scope.value===0) {
+					if ($scope.value) {
 						$scope.value = 1;
 					} else {
 						$scope.value = 0;
@@ -240,7 +305,7 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 				}
 				$scope.$parent.$eval(attrs.onChange);
 			});
-		}
+		}*/
 	}
 	return {
 		link: 			component,

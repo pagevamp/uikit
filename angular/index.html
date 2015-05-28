@@ -122,6 +122,42 @@
 									</tr>
 									<tr>
 										<td style="width:100px;">
+											Binary/str '1'
+										</td>
+										<td style="width:100px;">
+											<div on-off-switch ng-model="demo.switch_binary2" type="binary" on-change="demo.onSwitchChange('switch_binary2')"></div>
+										</td>
+										<td style="width:100px;">
+											<div class="label label-info">
+												{{demo.switch_binary2}}
+											</div>
+										</td>
+										<td>
+											<span ng-if="demo.switchChangeLog.switch_binary2">
+												Changed at {{demo.switchChangeLog.switch_binary2|date:'h:mm:ss a'}}
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:100px;">
+											Binary/str '0'
+										</td>
+										<td style="width:100px;">
+											<div on-off-switch ng-model="demo.switch_binary3" type="binary" on-change="demo.onSwitchChange('switch_binary3')"></div>
+										</td>
+										<td style="width:100px;">
+											<div class="label label-info">
+												{{demo.switch_binary3}}
+											</div>
+										</td>
+										<td>
+											<span ng-if="demo.switchChangeLog.switch_binary3">
+												Changed at {{demo.switchChangeLog.switch_binary3|date:'h:mm:ss a'}}
+											</span>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:100px;">
 											Read-only
 										</td>
 										<td style="width:100px;">
@@ -173,6 +209,8 @@
 					dialogVisible:	false,
 					switch_bool:	true,
 					switch_binary:	1,
+					switch_binary2:	'1',
+					switch_binary3:	'0',
 					switch_readonly:true,
 					switchChangeLog:	{},
 					onSwitchChange:	function(name) {
@@ -184,7 +222,7 @@
 					inplace_number:		29.99
 				};
 				
-				$scope.tab = 'dialog';
+				$scope.tab = 'switch';
 				
 			}]);
 		</script>

@@ -270,6 +270,12 @@ th {
   /* Force the pointer on links */
   /* Add custom classes */
   /* Markdown container, for parsed markdown */
+  /* Photo without label */
+  /* Photo with label */
+  /* 
+	Grids
+	1% margin per axis on each photo (0.5% each side)
+*/
   /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -5361,105 +5367,6 @@ a.pagevamp-theme .thumbnail.active {
   padding-left: 0;
   list-style: none;
 }
-.pagevamp-theme .appcard {
-  border-radius: 2px;
-  width: 258px;
-  height: 300px;
-  border: 1px solid #CBCBCB;
-  background-color: #ffffff;
-  display: inline-block;
-  margin: 4px;
-}
-.pagevamp-theme .appcard.flat {
-  border: 0;
-  margin: 0 25px 25px 0px;
-}
-.pagevamp-theme .appcard > img {
-  width: 100%;
-  border-radius: 2px;
-}
-.pagevamp-theme .appcard > div.title {
-  padding: 16px 16px 4px 16px;
-  color: #414A51;
-  font-size: 16px;
-  font-weight: bold;
-}
-.pagevamp-theme .appcard > div.title > div.rating {
-  float: right;
-}
-.pagevamp-theme .appcard > div.description {
-  padding: 0 16px;
-  color: #919CA4;
-  font-size: 13px;
-  font-weight: regular;
-}
-.pagevamp-theme .appcard:hover {
-  /*-moz-box-shadow:			10px 10px 5px #000000;
-		-webkit-box-shadow:			10px 10px 5px #000000;*/
-}
-.pagevamp-theme .appcard.with-actions > .preview {
-  border-radius: 2px;
-  position: relative;
-  height: 194px;
-}
-.pagevamp-theme .appcard.with-actions > .preview > img {
-  width: 100%;
-  height: 194px;
-  border-radius: 2px;
-}
-.pagevamp-theme .appcard.with-actions > .preview > .img {
-  -webkit-background-size: cover cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  height: 194px;
-}
-.pagevamp-theme .appcard.with-actions > .preview > .overlay {
-  display: none;
-  background-color: rgba(142, 109, 155, 0.7);
-  position: absolute;
-  top: 0;
-  height: 194px;
-  width: 100%;
-}
-.pagevamp-theme .appcard.with-actions > .preview > .overlay > .actions {
-  margin: 82px auto;
-  text-align: center;
-}
-.pagevamp-theme .appcard.with-actions > .preview > .overlay > .actions > .action {
-  text-decoration: none;
-  cursor: pointer;
-  line-height: 30px;
-  padding: 0 10px;
-  background-color: transparent;
-  border: 3px solid #FFFFFF;
-  color: #FFFFFF;
-  font-size: 14px;
-  font-weight: bold;
-  display: inline-block;
-}
-.pagevamp-theme .appcard.with-actions > .preview > .overlay > .actions > .action:hover {
-  background-color: #FFFFFF;
-  color: #404A51;
-}
-.pagevamp-theme .appcard.with-actions:hover .overlay {
-  display: block;
-}
-.pagevamp-theme .rating > .star {
-  display: table-cell;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAOCAYAAAC7IpUCAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDgvMDgvMTT28HSwAAACKElEQVRIiaXWQU/UQBQH8P+03bYTahqg6KZlL2zkRpY7B+8eiBgO3jxwIZxM/CJ+DI5GPXkz6AfgQDjshpAUSda2YE1tbXfpeMAtrXRmW32XJvPml3l589IMmCDeHX0XpYXxP9bzPGFeAieGbor3Rz8wdFPeFm7MbBzHrW0cxwiCQGi5RX/4HFa+bWJmgiBobWdGZGuLHl2kOD2/7fDpeYrRRfNul20cx0iSpLFNkqTosMgqAJAzhqvwBt+upxhfTfDl+Gdl0+HHa2wNFvBoqYOHiwqWTBkSIWhix+MxTNOEqqpQVRWKooD8sYwxTKdTZFmGLMsQhmEjS0buL/bm0EM6YY07onUIXr1YAQCI7Ovn9+eSEIJerwcAcF0XjDU/d2al/qqGve1lyNzproYsAXvby+ivamhrAcC2bVBKQSmFbdvNYclKALC5TnGwa0GRxUiRgYNdC5vrtFhragkhcBwHhmEUa4ZhwHGcYlya2qJHG32K/R1LiPd3LGz06b31Jta27UrB5cLndfxvW7nYBwviexbl51lZ5l+FKFeXr5z01ZsI8aUgP89mWfZPubp8pehL/+7gNUfFy6eLWHPUu8J8fmF1Vtf1Yi1N+f/6ck7XdXS7XaFVKgd7EzgrHTx7YmLw+HZ2twYGjocJ3n4KhZ2us4CBKIrg+/7cojVNg2VZxeyapsm35YfIyVnC8jyvfaTc5Dk7OUu4jxiRzfOcRVHEtVEUtbK/AcdCUULkPrElAAAAAElFTkSuQmCC');
-  background-repeat: no-repeat;
-  background-position: -30px 0;
-  width: 15px;
-  height: 14px;
-}
-.pagevamp-theme .rating > .star.half {
-  background-position: -15px 0;
-}
-.pagevamp-theme .rating > .star.full {
-  background-position: 0 0;
-}
 .pagevamp-theme .list-group {
   margin-bottom: 20px;
   padding-left: 0;
@@ -6907,6 +6814,105 @@ button.pagevamp-theme .close {
   margin-left: 270px;
   background-color: #F1F1F1;
 }
+.pagevamp-theme .appcard {
+  border-radius: 2px;
+  width: 258px;
+  height: 300px;
+  border: 1px solid #CBCBCB;
+  background-color: #ffffff;
+  display: inline-block;
+  margin: 4px;
+}
+.pagevamp-theme .appcard.flat {
+  border: 0;
+  margin: 0 25px 25px 0px;
+}
+.pagevamp-theme .appcard > img {
+  width: 100%;
+  border-radius: 2px;
+}
+.pagevamp-theme .appcard > div.title {
+  padding: 16px 16px 4px 16px;
+  color: #414A51;
+  font-size: 16px;
+  font-weight: bold;
+}
+.pagevamp-theme .appcard > div.title > div.rating {
+  float: right;
+}
+.pagevamp-theme .appcard > div.description {
+  padding: 0 16px;
+  color: #919CA4;
+  font-size: 13px;
+  font-weight: regular;
+}
+.pagevamp-theme .appcard:hover {
+  /*-moz-box-shadow:			10px 10px 5px #000000;
+		-webkit-box-shadow:			10px 10px 5px #000000;*/
+}
+.pagevamp-theme .appcard.with-actions > .preview {
+  border-radius: 2px;
+  position: relative;
+  height: 194px;
+}
+.pagevamp-theme .appcard.with-actions > .preview > img {
+  width: 100%;
+  height: 194px;
+  border-radius: 2px;
+}
+.pagevamp-theme .appcard.with-actions > .preview > .img {
+  -webkit-background-size: cover cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 194px;
+}
+.pagevamp-theme .appcard.with-actions > .preview > .overlay {
+  display: none;
+  background-color: rgba(142, 109, 155, 0.7);
+  position: absolute;
+  top: 0;
+  height: 194px;
+  width: 100%;
+}
+.pagevamp-theme .appcard.with-actions > .preview > .overlay > .actions {
+  margin: 82px auto;
+  text-align: center;
+}
+.pagevamp-theme .appcard.with-actions > .preview > .overlay > .actions > .action {
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 30px;
+  padding: 0 10px;
+  background-color: transparent;
+  border: 3px solid #FFFFFF;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-block;
+}
+.pagevamp-theme .appcard.with-actions > .preview > .overlay > .actions > .action:hover {
+  background-color: #FFFFFF;
+  color: #404A51;
+}
+.pagevamp-theme .appcard.with-actions:hover .overlay {
+  display: block;
+}
+.pagevamp-theme .rating > .star {
+  display: table-cell;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAOCAYAAAC7IpUCAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAAWdEVYdENyZWF0aW9uIFRpbWUAMDgvMDgvMTT28HSwAAACKElEQVRIiaXWQU/UQBQH8P+03bYTahqg6KZlL2zkRpY7B+8eiBgO3jxwIZxM/CJ+DI5GPXkz6AfgQDjshpAUSda2YE1tbXfpeMAtrXRmW32XJvPml3l589IMmCDeHX0XpYXxP9bzPGFeAieGbor3Rz8wdFPeFm7MbBzHrW0cxwiCQGi5RX/4HFa+bWJmgiBobWdGZGuLHl2kOD2/7fDpeYrRRfNul20cx0iSpLFNkqTosMgqAJAzhqvwBt+upxhfTfDl+Gdl0+HHa2wNFvBoqYOHiwqWTBkSIWhix+MxTNOEqqpQVRWKooD8sYwxTKdTZFmGLMsQhmEjS0buL/bm0EM6YY07onUIXr1YAQCI7Ovn9+eSEIJerwcAcF0XjDU/d2al/qqGve1lyNzproYsAXvby+ivamhrAcC2bVBKQSmFbdvNYclKALC5TnGwa0GRxUiRgYNdC5vrtFhragkhcBwHhmEUa4ZhwHGcYlya2qJHG32K/R1LiPd3LGz06b31Jta27UrB5cLndfxvW7nYBwviexbl51lZ5l+FKFeXr5z01ZsI8aUgP89mWfZPubp8pehL/+7gNUfFy6eLWHPUu8J8fmF1Vtf1Yi1N+f/6ck7XdXS7XaFVKgd7EzgrHTx7YmLw+HZ2twYGjocJ3n4KhZ2us4CBKIrg+/7cojVNg2VZxeyapsm35YfIyVnC8jyvfaTc5Dk7OUu4jxiRzfOcRVHEtVEUtbK/AcdCUULkPrElAAAAAElFTkSuQmCC');
+  background-repeat: no-repeat;
+  background-position: -30px 0;
+  width: 15px;
+  height: 14px;
+}
+.pagevamp-theme .rating > .star.half {
+  background-position: -15px 0;
+}
+.pagevamp-theme .rating > .star.full {
+  background-position: 0 0;
+}
 .pagevamp-theme .iframeThemeEditor {
   width: 100%;
   min-height: 200px;
@@ -7332,6 +7338,112 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   cursor: pointer;
   vertical-align: middle !important;
   font-size: 11px;
+}
+.pagevamp-theme img.photo {
+  max-width: 100%;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+.pagevamp-theme div.photo {
+  max-width: 100%;
+  /*position:		relative;*/
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  /* No actions */
+  /* With actions */
+  /* Multi-line ellipsis hack 
+	&>div:after {
+		content: "";
+		text-align: right;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 70%;
+		height: 1.2em;
+		background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.6) 50%);
+	}*/
+}
+.pagevamp-theme div.photo > img {
+  /*position:	absolute;
+		left:		0;
+		top:		0;*/
+  width: 100%;
+  /*.border-radius(@radius);*/
+  border-radius: 3px 3px 0 0;
+}
+.pagevamp-theme div.photo > div.actions {
+  cursor: default;
+  width: 100%;
+  position: relative;
+}
+.pagevamp-theme div.photo > div.actions > img {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+}
+.pagevamp-theme div.photo > div.actions > div {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  display: none;
+}
+.pagevamp-theme div.photo > div.actions:hover > img {
+  zoom: 1;
+  opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(@a * 100));
+  filter: alpha(opacity= @a * 100);
+}
+.pagevamp-theme div.photo > div.actions:hover > div {
+  display: block;
+}
+.pagevamp-theme div.photo > div.text {
+  /*position:	absolute;
+		left:		0;
+		bottom:		0;*/
+  width: 100%;
+  padding: 4px;
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  /*.border-radius(@radius);*/
+  /*.border-radius-custom (0, 0, 2px, 2px);*/
+  font-size: 11px;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px #000000;
+  color: #ffffff;
+  /* Multi-line ellipsis hack 
+		position: relative;
+		height:		40px;*/
+}
+.pagevamp-theme div.photo > div.text.transparent {
+  background-color: transparent;
+  text-shadow: 0 0 0 transparent;
+  color: #6b747c;
+}
+.pagevamp-theme .photo-grid {
+  width: 100%;
+}
+.pagevamp-theme .photo-grid .grid-2 {
+  float: left;
+  width: 49%;
+  margin: 0.5% 0.5%;
+}
+.pagevamp-theme .photo-grid .grid-3 {
+  float: left;
+  width: 32.33%;
+  margin: 0.5% 0.5%;
+}
+.pagevamp-theme .photo-grid .grid-4 {
+  float: left;
+  width: 24%;
+  margin: 0.5% 0.5%;
+}
+.pagevamp-theme .photo-grid .grid-5 {
+  float: left;
+  width: 19%;
+  margin: 0.5% 0.5%;
 }
 .pagevamp-theme .admins .admin-profile {
   border-radius: 5px;

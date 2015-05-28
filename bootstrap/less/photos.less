@@ -1,0 +1,117 @@
+
+/* Photo without label */
+img.photo {
+	max-width:	100%;
+	.border-radius(3px);
+	border:				1px solid rgba(0,0,0,0.6);
+}
+
+/* Photo with label */
+div.photo {
+	@radius:		3px;
+	max-width:		100%;
+	/*position:		relative;*/
+	.border-radius(@radius);
+	
+	border:				1px solid rgba(0,0,0,0.6);
+	
+	/* No actions */
+	&>img {
+		/*position:	absolute;
+		left:		0;
+		top:		0;*/
+		width:		100%;
+		/*.border-radius(@radius);*/
+		.border-radius-custom (@radius, @radius, 0, 0);
+	}
+	
+	/* With actions */
+	&>div.actions {
+		cursor:		default;
+		width:		100%;
+		position:	relative;
+		&>img {
+			width:		100%;
+			.border-radius-custom (@radius, @radius, 0, 0);
+		}
+		&>div {
+			position:	absolute;
+			bottom:		6px;
+			left:		0;
+			display:	none;
+		}
+		&:hover {
+			&>img {
+				.opacity(0.4);
+			}
+			&>div {
+				display:	block;
+			}
+		}
+	}
+	
+	&>div.text {
+		/*position:	absolute;
+		left:		0;
+		bottom:		0;*/
+		width:		100%;
+		padding:	4px;
+		text-align:	justify;
+		background-color:	rgba(0,0,0,0.6);
+		.ellipsis();
+		/*.border-radius(@radius);*/
+		/*.border-radius-custom (0, 0, 2px, 2px);*/
+		font-size:		11px;
+		font-weight:	normal;
+		.text-inset(#ffffff, #000000);
+		
+		&.transparent {
+			background-color:	transparent;
+			text-shadow: 	0 0 0 transparent;
+			color: 			@default-color;
+		}
+		
+		/* Multi-line ellipsis hack 
+		position: relative;
+		height:		40px;*/
+	}
+	/* Multi-line ellipsis hack 
+	&>div:after {
+		content: "";
+		text-align: right;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 70%;
+		height: 1.2em;
+		background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.6) 50%);
+	}*/
+}
+
+/* 
+	Grids
+	1% margin per axis on each photo (0.5% each side)
+*/
+.photo-grid {
+	width:	100%;
+	.grid-2 {
+		float:	left;
+		width:	49%;
+		margin:	0.5% 0.5%;
+	}
+	.grid-3 {
+		float:	left;
+		width:	32.33%;
+		margin:	0.5% 0.5%;
+	}
+	.grid-4 {
+		float:	left;
+		width:	24%;
+		margin:	0.5% 0.5%;
+	}
+	.grid-5 {
+		float:	left;
+		width:	19%;
+		margin:	0.5% 0.5%;
+	}
+}

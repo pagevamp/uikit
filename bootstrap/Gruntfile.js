@@ -457,11 +457,11 @@ module.exports = function (grunt) {
 		|_|          |___/                          |_|    
 		
 		Use:
-			- Scoped:	grunt dist --force
-			- no scope:	grunt distg --force
+			- Private scope:		grunt private --force
+			- Global scope:		grunt public --force
 	*/
-	grunt.registerTask('dist', ['clean', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'dist-docs', 'cleanup_scope']);
-	grunt.registerTask('distg', ['clean', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'dist-docs', 'unscope']);
+	grunt.registerTask('private', ['clean', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'dist-docs', 'cleanup_scope']);
+	grunt.registerTask('public', ['clean', 'dist-css', 'copy:fonts', 'copy:images', 'dist-js', 'dist-docs', 'unscope']);
 	
 	grunt.registerTask('cleanup', ['cleanup_scope']);
 	

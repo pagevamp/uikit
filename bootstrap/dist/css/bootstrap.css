@@ -1,9 +1,3 @@
-/*!
- * Bootstrap v3.2.0 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -94,7 +88,6 @@ figure {
 }
 hr {
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -145,8 +138,6 @@ input {
 }
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -192,7 +183,6 @@ th {
     text-shadow: none !important;
     color: #000 !important;
     background: transparent !important;
-    -webkit-box-shadow: none !important;
     box-shadow: none !important;
   }
   a,
@@ -982,6 +972,8 @@ th {
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out 1s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out 1s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out 1s ease-in-out;
   -o-transition: all 0.2s ease-in-out 1s ease-in-out;
   transition: all 0.2s ease-in-out 1s ease-in-out;
   display: inline-block;
@@ -1389,13 +1381,11 @@ a.pagevamp-theme .bg-danger:hover {
   color: #ffffff;
   background-color: #333333;
   border-radius: 3px;
-  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 .pagevamp-theme kbd kbd {
   padding: 0;
   font-size: 100%;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .pagevamp-theme pre {
@@ -2437,8 +2427,11 @@ a.pagevamp-theme .bg-danger:hover {
   border: 1px solid #cccccc;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 3px 5px #000000;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 3px 5px #000000;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 3px 5px #000000;
-  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s 1s ease-in-out;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
+  -ms-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
 }
@@ -2828,6 +2821,7 @@ select[multiple].pagevamp-theme .input-lg {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) 3px 5px #000000;
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) 3px 5px #000000;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) 3px 5px #000000;
 }
 .pagevamp-theme .btn.disabled,
@@ -2841,6 +2835,7 @@ fieldset[disabled] .pagevamp-theme .btn {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(@a * 100));
   filter: alpha(opacity= @a * 100);
   -webkit-box-shadow: none 3px 5px #000000;
+  -moz-box-shadow: none 3px 5px #000000;
   box-shadow: none 3px 5px #000000;
 }
 .pagevamp-theme .btn-default {
@@ -3183,6 +3178,7 @@ fieldset[disabled] .pagevamp-theme .btn-danger.active {
 fieldset[disabled] .pagevamp-theme .btn-link {
   background-color: transparent;
   -webkit-box-shadow: none 3px 5px #000000;
+  -moz-box-shadow: none 3px 5px #000000;
   box-shadow: none 3px 5px #000000;
 }
 .pagevamp-theme .btn-link,
@@ -3263,6 +3259,7 @@ fieldset[disabled] .pagevamp-theme .btn-link:focus {
   width: 62px;
   height: 28px;
   -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3) 3px 5px #000000;
+  -moz-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3) 3px 5px #000000;
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.3) 3px 5px #000000;
 }
 .pagevamp-theme .btn-switch.small > .bg {
@@ -3274,6 +3271,7 @@ fieldset[disabled] .pagevamp-theme .btn-link:focus {
 }
 .pagevamp-theme .btn-switch > .handle {
   -webkit-transition: 0.05s linear;
+  -moz-transition: 0.05s linear;
   -o-transition: 0.05s linear;
   transition: 0.05s linear;
   position: absolute;
@@ -3285,10 +3283,10 @@ fieldset[disabled] .pagevamp-theme .btn-link:focus {
   height: 34px;
   /*@height + ( @overflow * 2 );*/
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 3px 5px #000000;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 3px 5px #000000;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) 3px 5px #000000;
   background-image: -webkit-linear-gradient(top, #ffffff 0%, #eceef0 100%);
   background-image: -o-linear-gradient(top, #ffffff 0%, #eceef0 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#eceef0));
   background-image: linear-gradient(to bottom, #ffffff 0%, #eceef0 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffeceef0', GradientType=0);
@@ -3310,6 +3308,8 @@ fieldset[disabled] .pagevamp-theme .btn-link:focus {
 .pagevamp-theme .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear 1s ease-in-out;
+  -moz-transition: opacity 0.15s linear 1s ease-in-out;
+  -ms-transition: opacity 0.15s linear 1s ease-in-out;
   -o-transition: opacity 0.15s linear 1s ease-in-out;
   transition: opacity 0.15s linear 1s ease-in-out;
 }
@@ -3333,6 +3333,8 @@ tbody.pagevamp-theme .collapse.in {
   height: 0;
   overflow: hidden;
   -webkit-transition: height 0.35s ease 1s ease-in-out;
+  -moz-transition: height 0.35s ease 1s ease-in-out;
+  -ms-transition: height 0.35s ease 1s ease-in-out;
   -o-transition: height 0.35s ease 1s ease-in-out;
   transition: height 0.35s ease 1s ease-in-out;
 }
@@ -3370,8 +3372,8 @@ tbody.pagevamp-theme .collapse.in {
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175) 3px 5px #000000;
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175) 3px 5px #000000;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175) 3px 5px #000000;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .pagevamp-theme .dropdown-menu.pull-right {
@@ -3572,10 +3574,12 @@ tbody.pagevamp-theme .collapse.in {
 }
 .pagevamp-theme .btn-group.open .dropdown-toggle {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) 3px 5px #000000;
+  -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) 3px 5px #000000;
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) 3px 5px #000000;
 }
 .pagevamp-theme .btn-group.open .dropdown-toggle.btn-link {
   -webkit-box-shadow: none 3px 5px #000000;
+  -moz-box-shadow: none 3px 5px #000000;
   box-shadow: none 3px 5px #000000;
 }
 .pagevamp-theme .btn .caret {
@@ -4316,7 +4320,6 @@ fieldset[disabled] .pagevamp-theme ul.tabs.tabs-medium > li.active.active {
   padding-right: 15px;
   padding-left: 15px;
   border-top: 1px solid transparent;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
 }
@@ -4327,7 +4330,6 @@ fieldset[disabled] .pagevamp-theme ul.tabs.tabs-medium > li.active.active {
   .pagevamp-theme .navbar-collapse {
     width: auto;
     border-top: 0;
-    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .pagevamp-theme .navbar-collapse.collapse {
@@ -4388,7 +4390,6 @@ fieldset[disabled] .pagevamp-theme ul.tabs.tabs-medium > li.active.active {
   left: 0;
   z-index: 1030;
   -webkit-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 @media (min-width: 768px) {
@@ -4468,7 +4469,6 @@ fieldset[disabled] .pagevamp-theme ul.tabs.tabs-medium > li.active.active {
     margin-top: 0;
     background-color: transparent;
     border: 0;
-    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .pagevamp-theme .navbar-nav .open .dropdown-menu > li > a,
@@ -4520,6 +4520,7 @@ fieldset[disabled] .pagevamp-theme ul.tabs.tabs-medium > li.active.active {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1) 3px 5px #000000;
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1) 3px 5px #000000;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1) 3px 5px #000000;
   margin-top: 13px;
   margin-bottom: 13px;
@@ -4585,6 +4586,7 @@ fieldset[disabled] .pagevamp-theme ul.tabs.tabs-medium > li.active.active {
     padding-top: 0;
     padding-bottom: 0;
     -webkit-box-shadow: none 3px 5px #000000;
+    -moz-box-shadow: none 3px 5px #000000;
     box-shadow: none 3px 5px #000000;
   }
   .pagevamp-theme .navbar-form.navbar-right:last-child {
@@ -5141,6 +5143,8 @@ a.list-group-item.active > .pagevamp-theme .badge,
   border: 1px solid #dddddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out 1s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out 1s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out 1s ease-in-out;
   -o-transition: all 0.2s ease-in-out 1s ease-in-out;
   transition: all 0.2s ease-in-out 1s ease-in-out;
 }
@@ -5159,6 +5163,7 @@ a.pagevamp-theme .thumbnail.active {
   color: #6b747c;
 }
 .pagevamp-theme .alert {
+  background: red;
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -5241,14 +5246,6 @@ a.pagevamp-theme .thumbnail.active {
     background-position: 0 0;
   }
 }
-@-o-keyframes progress-bar-stripes {
-  from {
-    background-position: 40px 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
 @keyframes progress-bar-stripes {
   from {
     background-position: 40px 0;
@@ -5264,6 +5261,7 @@ a.pagevamp-theme .thumbnail.active {
   background-color: #f5f5f5;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) 3px 5px #000000;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) 3px 5px #000000;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) 3px 5px #000000;
 }
 .pagevamp-theme .progress-bar {
@@ -5276,8 +5274,11 @@ a.pagevamp-theme .thumbnail.active {
   text-align: center;
   background-color: #428bca;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15) 3px 5px #000000;
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15) 3px 5px #000000;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15) 3px 5px #000000;
   -webkit-transition: width 0.6s ease 1s ease-in-out;
+  -moz-transition: width 0.6s ease 1s ease-in-out;
+  -ms-transition: width 0.6s ease 1s ease-in-out;
   -o-transition: width 0.6s ease 1s ease-in-out;
   transition: width 0.6s ease 1s ease-in-out;
 }
@@ -5286,7 +5287,6 @@ a.pagevamp-theme .thumbnail.active {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-  -webkit-background-size: 40px 40px;
   background-size: 40px 40px;
 }
 .pagevamp-theme .progress.active .progress-bar,
@@ -5304,7 +5304,6 @@ a.pagevamp-theme .thumbnail.active {
   min-width: 30px;
   background-color: transparent;
   background-image: none;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .pagevamp-theme .progress-bar-success {
@@ -5891,6 +5890,7 @@ a.pagevamp-theme .list-group-item-danger.active:focus {
   border: 1px solid #e3e3e3;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05) 3px 5px #000000;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05) 3px 5px #000000;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05) 3px 5px #000000;
 }
 .pagevamp-theme .well blockquote {
@@ -5953,15 +5953,14 @@ button.pagevamp-theme .close {
 }
 .pagevamp-theme .modal.fade .modal-dialog {
   -webkit-transform: translate3d(0, -25%, 0);
-  -o-transform: translate3d(0, -25%, 0);
   transform: translate3d(0, -25%, 0);
   -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
   -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 .pagevamp-theme .modal.in .modal-dialog {
   -webkit-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 .pagevamp-theme .modal-open .modal {
@@ -5980,8 +5979,8 @@ button.pagevamp-theme .close {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5) 3px 5px #000000;
+  -moz-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5) 3px 5px #000000;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5) 3px 5px #000000;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   outline: 0;
 }
@@ -6053,6 +6052,7 @@ button.pagevamp-theme .close {
   }
   .pagevamp-theme .modal-content {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) 3px 5px #000000;
+    -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) 3px 5px #000000;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) 3px 5px #000000;
   }
   .pagevamp-theme .modal-sm {
@@ -6178,12 +6178,12 @@ button.pagevamp-theme .close {
   padding: 1px;
   text-align: left;
   background-color: #ffffff;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 3px 5px #000000;
+  -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 3px 5px #000000;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) 3px 5px #000000;
   white-space: normal;
 }
@@ -6300,6 +6300,8 @@ button.pagevamp-theme .close {
   display: none;
   position: relative;
   -webkit-transition: 0.6s ease-in-out left 1s ease-in-out;
+  -moz-transition: 0.6s ease-in-out left 1s ease-in-out;
+  -ms-transition: 0.6s ease-in-out left 1s ease-in-out;
   -o-transition: 0.6s ease-in-out left 1s ease-in-out;
   transition: 0.6s ease-in-out left 1s ease-in-out;
 }
@@ -6356,7 +6358,6 @@ button.pagevamp-theme .close {
 .pagevamp-theme .carousel-control.left {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
@@ -6366,7 +6367,6 @@ button.pagevamp-theme .close {
   right: 0;
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
@@ -6487,52 +6487,52 @@ button.pagevamp-theme .close {
 }
 .pagevamp-theme .clearfix:before,
 .pagevamp-theme .clearfix:after,
-.pagevamp-theme .dl-horizontal dd:before,
-.pagevamp-theme .dl-horizontal dd:after,
-.pagevamp-theme .container:before,
-.pagevamp-theme .container:after,
-.pagevamp-theme .container-fluid:before,
-.pagevamp-theme .container-fluid:after,
-.pagevamp-theme .row:before,
-.pagevamp-theme .row:after,
-.pagevamp-theme .form-horizontal .form-group:before,
-.pagevamp-theme .form-horizontal .form-group:after,
-.pagevamp-theme .btn-toolbar:before,
-.pagevamp-theme .btn-toolbar:after,
-.pagevamp-theme .btn-group-vertical > .btn-group:before,
-.pagevamp-theme .btn-group-vertical > .btn-group:after,
-.pagevamp-theme .nav:before,
-.pagevamp-theme .nav:after,
-.pagevamp-theme .navbar:before,
-.pagevamp-theme .navbar:after,
-.pagevamp-theme .navbar-header:before,
-.pagevamp-theme .navbar-header:after,
-.pagevamp-theme .navbar-collapse:before,
-.pagevamp-theme .navbar-collapse:after,
-.pagevamp-theme .pager:before,
-.pagevamp-theme .pager:after,
-.pagevamp-theme .panel-body:before,
-.pagevamp-theme .panel-body:after,
-.pagevamp-theme .modal-footer:before,
-.pagevamp-theme .modal-footer:after {
+.pagevamp-theme .pagevamp-theme .dl-horizontal dd:before,
+.pagevamp-theme .pagevamp-theme .dl-horizontal dd:after,
+.pagevamp-theme .pagevamp-theme .container:before,
+.pagevamp-theme .pagevamp-theme .container:after,
+.pagevamp-theme .pagevamp-theme .container-fluid:before,
+.pagevamp-theme .pagevamp-theme .container-fluid:after,
+.pagevamp-theme .pagevamp-theme .row:before,
+.pagevamp-theme .pagevamp-theme .row:after,
+.pagevamp-theme .pagevamp-theme .form-horizontal .form-group:before,
+.pagevamp-theme .pagevamp-theme .form-horizontal .form-group:after,
+.pagevamp-theme .pagevamp-theme .btn-toolbar:before,
+.pagevamp-theme .pagevamp-theme .btn-toolbar:after,
+.pagevamp-theme .pagevamp-theme .btn-group-vertical > .btn-group:before,
+.pagevamp-theme .pagevamp-theme .btn-group-vertical > .btn-group:after,
+.pagevamp-theme .pagevamp-theme .nav:before,
+.pagevamp-theme .pagevamp-theme .nav:after,
+.pagevamp-theme .pagevamp-theme .navbar:before,
+.pagevamp-theme .pagevamp-theme .navbar:after,
+.pagevamp-theme .pagevamp-theme .navbar-header:before,
+.pagevamp-theme .pagevamp-theme .navbar-header:after,
+.pagevamp-theme .pagevamp-theme .navbar-collapse:before,
+.pagevamp-theme .pagevamp-theme .navbar-collapse:after,
+.pagevamp-theme .pagevamp-theme .pager:before,
+.pagevamp-theme .pagevamp-theme .pager:after,
+.pagevamp-theme .pagevamp-theme .panel-body:before,
+.pagevamp-theme .pagevamp-theme .panel-body:after,
+.pagevamp-theme .pagevamp-theme .modal-footer:before,
+.pagevamp-theme .pagevamp-theme .modal-footer:after {
   content: " ";
   display: table;
 }
 .pagevamp-theme .clearfix:after,
-.pagevamp-theme .dl-horizontal dd:after,
-.pagevamp-theme .container:after,
-.pagevamp-theme .container-fluid:after,
-.pagevamp-theme .row:after,
-.pagevamp-theme .form-horizontal .form-group:after,
-.pagevamp-theme .btn-toolbar:after,
-.pagevamp-theme .btn-group-vertical > .btn-group:after,
-.pagevamp-theme .nav:after,
-.pagevamp-theme .navbar:after,
-.pagevamp-theme .navbar-header:after,
-.pagevamp-theme .navbar-collapse:after,
-.pagevamp-theme .pager:after,
-.pagevamp-theme .panel-body:after,
-.pagevamp-theme .modal-footer:after {
+.pagevamp-theme .pagevamp-theme .dl-horizontal dd:after,
+.pagevamp-theme .pagevamp-theme .container:after,
+.pagevamp-theme .pagevamp-theme .container-fluid:after,
+.pagevamp-theme .pagevamp-theme .row:after,
+.pagevamp-theme .pagevamp-theme .form-horizontal .form-group:after,
+.pagevamp-theme .pagevamp-theme .btn-toolbar:after,
+.pagevamp-theme .pagevamp-theme .btn-group-vertical > .btn-group:after,
+.pagevamp-theme .pagevamp-theme .nav:after,
+.pagevamp-theme .pagevamp-theme .navbar:after,
+.pagevamp-theme .pagevamp-theme .navbar-header:after,
+.pagevamp-theme .pagevamp-theme .navbar-collapse:after,
+.pagevamp-theme .pagevamp-theme .pager:after,
+.pagevamp-theme .pagevamp-theme .panel-body:after,
+.pagevamp-theme .pagevamp-theme .modal-footer:after {
   clear: both;
 }
 .pagevamp-theme .center-block {
@@ -6569,7 +6569,6 @@ button.pagevamp-theme .close {
 .pagevamp-theme .affix {
   position: fixed;
   -webkit-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 .pagevamp-theme .text-center {
@@ -6810,6 +6809,7 @@ button.pagevamp-theme .close {
 .pagevamp-theme .pagevamp-editor > .content {
   height: 100%;
   -webkit-box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.6);
   box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.6);
   margin-left: 270px;
   background-color: #F1F1F1;
@@ -6861,7 +6861,6 @@ button.pagevamp-theme .close {
   border-radius: 2px;
 }
 .pagevamp-theme .appcard.with-actions > .preview > .img {
-  -webkit-background-size: cover cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -6930,7 +6929,6 @@ button.pagevamp-theme .close {
 .pagevamp-theme .pagevamp-dialog.ng-enter,
 .pagevamp-theme .pagevamp-dialog.ng-leave {
   -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
-  -o-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
   transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
 }
 .pagevamp-theme .pagevamp-dialog.ng-enter,
@@ -6957,6 +6955,7 @@ button.pagevamp-theme .close {
 }
 .pagevamp-theme .pagevamp-dialog > .overlay > .dialog-content .dialog-header {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   background-color: #FAFAFA;
   padding: 20px;
@@ -6970,6 +6969,7 @@ button.pagevamp-theme .close {
 .pagevamp-theme .pagevamp-dialog > .overlay > .dialog-content .dialog-footer {
   vertical-align: middle;
   -webkit-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
   background-color: #FAFAFA;
   padding: 15px;
@@ -7159,6 +7159,8 @@ button.pagevamp-theme .close {
   margin-bottom: 3px;
 }
 .pagevamp-theme .payment .payment-card {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   background-color: #F8F9F9;
   border: 1px solid #DDE1E3;
@@ -7220,10 +7222,15 @@ button.pagevamp-theme .close {
   border: 1px solid #cccccc;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 3px 5px #000000;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 3px 5px #000000;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) 3px 5px #000000;
-  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s 1s ease-in-out;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
+  -ms-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s 1s ease-in-out;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0;
   float: left;
   width: 50%;
@@ -7255,10 +7262,14 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   height: auto;
 }
 .pagevamp-theme .payment.card-form .input-duo input:first-child {
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
   border-right: 0;
 }
 .pagevamp-theme .payment.card-form .input-duo input:last-child {
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
 }
 .pagevamp-theme .payment.card-form input[type="text"] {
@@ -7341,12 +7352,16 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
 }
 .pagevamp-theme img.photo {
   max-width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.6);
 }
 .pagevamp-theme div.photo {
   max-width: 100%;
   /*position:		relative;*/
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, 0.6);
   /* No actions */
@@ -7369,6 +7384,8 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
 		top:		0;*/
   width: 100%;
   /*.border-radius(@radius);*/
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
 .pagevamp-theme div.photo > div.actions {
@@ -7378,6 +7395,8 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
 }
 .pagevamp-theme div.photo > div.actions > img {
   width: 100%;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
 }
 .pagevamp-theme div.photo > div.actions > div {
@@ -7446,6 +7465,8 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   margin: 0.5% 0.5%;
 }
 .pagevamp-theme .admins .admin-profile {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   background-color: #F8F9F9;
   border: 1px solid #DDE1E3;
@@ -7470,6 +7491,8 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   display: block;
 }
 .pagevamp-theme .admins .admin-profile > .profile-avatar {
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
   width: 72px;
   display: table-cell;
@@ -7477,6 +7500,8 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   padding: 0;
 }
 .pagevamp-theme .admins .admin-profile > .profile-avatar > img {
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
   width: 100%;
 }
@@ -7574,7 +7599,6 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
 }
 .pagevamp-theme .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
-  -o-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 @-webkit-keyframes fa-spin {
@@ -7587,27 +7611,13 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
     transform: rotate(359deg);
   }
 }
-@-o-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
 @keyframes fa-spin {
   0% {
     -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
@@ -7615,35 +7625,30 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .pagevamp-theme .fa-rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .pagevamp-theme .fa-rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
-  -o-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .pagevamp-theme .fa-flip-horizontal {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .pagevamp-theme .fa-flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
-  -o-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 .pagevamp-theme :root .fa-rotate-90,
@@ -7651,7 +7656,6 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
 .pagevamp-theme :root .fa-rotate-270,
 .pagevamp-theme :root .fa-flip-horizontal,
 .pagevamp-theme :root .fa-flip-vertical {
-  -webkit-filter: none;
   filter: none;
 }
 .pagevamp-theme .fa-stack {

@@ -10,7 +10,7 @@ img.photo {
 div.photo {
 	@radius:		3px;
 	max-width:		100%;
-	/*position:		relative;*/
+	position:		relative;
 	.border-radius(@radius);
 	
 	border:				1px solid rgba(0,0,0,0.6);
@@ -23,6 +23,7 @@ div.photo {
 		width:		100%;
 		/*.border-radius(@radius);*/
 		.border-radius-custom (@radius, @radius, 0, 0);
+		cursor: -webkit-zoom-in;
 	}
 	
 	/* With actions */
@@ -55,13 +56,15 @@ div.photo {
 		left:		0;
 		bottom:		0;*/
 		width:		100%;
-		padding:	4px;
+		padding:	8px;
+		position: absolute;
+		bottom: 0;
 		text-align:	justify;
-		background-color:	rgba(0,0,0,0.6);
+		background-color:	rgba(0,0,0,0.4);
 		.ellipsis();
 		/*.border-radius(@radius);*/
 		/*.border-radius-custom (0, 0, 2px, 2px);*/
-		font-size:		11px;
+		font-size:		13px;
 		font-weight:	normal;
 		.text-inset(#ffffff, #000000);
 		

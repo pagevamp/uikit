@@ -2100,7 +2100,7 @@ a.pagevamp-theme .bg-danger:hover {
 .pagevamp-theme .table > thead > tr > td,
 .pagevamp-theme .table > tbody > tr > td,
 .pagevamp-theme .table > tfoot > tr > td {
-  padding: 8px;
+  padding: 14px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #dddddd;
@@ -5163,7 +5163,6 @@ a.pagevamp-theme .thumbnail.active {
   color: #6b747c;
 }
 .pagevamp-theme .alert {
-  background: red;
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
@@ -7121,7 +7120,7 @@ button.pagevamp-theme .close {
   cursor: pointer;
 }
 .pagevamp-theme table.small td {
-  font-size: 11px;
+  font-size: 13px;
 }
 .pagevamp-theme table.no-margin {
   margin: 0;
@@ -7359,7 +7358,7 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
 }
 .pagevamp-theme div.photo {
   max-width: 100%;
-  /*position:		relative;*/
+  position: relative;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -7387,6 +7386,7 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
+  cursor: -webkit-zoom-in;
 }
 .pagevamp-theme div.photo > div.actions {
   cursor: default;
@@ -7420,15 +7420,17 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
 		left:		0;
 		bottom:		0;*/
   width: 100%;
-  padding: 4px;
+  padding: 8px;
+  position: absolute;
+  bottom: 0;
   text-align: justify;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   /*.border-radius(@radius);*/
   /*.border-radius-custom (0, 0, 2px, 2px);*/
-  font-size: 11px;
+  font-size: 13px;
   font-weight: normal;
   text-shadow: 1px 1px 1px #000000;
   color: #ffffff;

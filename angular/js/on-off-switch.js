@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 /*
 	On/Off Switch
 */
+=======
+>>>>>>> angular changes
 ngModule.directive('onOffSwitch', function ($timeout) {
 	var component = function($scope, element, attrs, ngModelController) {
 		
@@ -32,7 +35,10 @@ ngModule.directive('onOffSwitch', function ($timeout) {
 			} else {
 				$scope.value = ngModelController.$viewValue || ngModelController.$viewValue === 'true';
 			}
+<<<<<<< HEAD
 			console.log("$scope.value",$scope.value, element);
+=======
+>>>>>>> angular changes
 		};
 		
 		

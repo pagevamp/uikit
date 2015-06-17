@@ -13,8 +13,13 @@
     "header": "                                                                 _ _    \n _ __   __ _  __ _  _____   ____ _ _ __ ___  _ __        ___  __| | | __\n| '_ \\ / _` |/ _` |/ _ \\ \\ / / _` | '_ ` _ \\| '_ \\      / __|/ _` | |/ /\n| |_) | (_| | (_| |  __/\\ V / (_| | | | | | | |_) |  _  \\__ \\ (_| |   < \n| .__/ \\__,_|\\__, |\\___| \\_/ \\__,_|_| |_| |_| .__/  (_) |___/\\__,_|_|\\_\\\n|_|          |___/                          |_|                         ",
     "version": {
         "major": 0,
+<<<<<<< HEAD
         "minor": 1,
         "build": 4
+=======
+        "minor": 0,
+        "build": 22
+>>>>>>> angular changes
     },
     "upload": false,
     "buildlog": [
@@ -56,7 +61,147 @@
                 "name": "Julien L",
                 "email": "julien@pagevamp.com"
             },
+<<<<<<< HEAD
             "version": "0.1.4"
+=======
+            "version": "0.0.5"
+        },
+        {
+            "date": "2015-05-04T13:25:06.641Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.6"
+        },
+        {
+            "date": "2015-05-04T13:26:20.278Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.7"
+        },
+        {
+            "date": "2015-05-04T13:36:51.521Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.8"
+        },
+        {
+            "date": "2015-05-04T13:37:36.468Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.9"
+        },
+        {
+            "date": "2015-05-04T13:37:55.162Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.10"
+        },
+        {
+            "date": "2015-05-04T13:38:19.019Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.11"
+        },
+        {
+            "date": "2015-05-04T13:39:20.742Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.12"
+        },
+        {
+            "date": "2015-05-04T13:43:16.194Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.13"
+        },
+        {
+            "date": "2015-05-04T16:35:02.336Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.14"
+        },
+        {
+            "date": "2015-05-04T16:45:09.857Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.15"
+        },
+        {
+            "date": "2015-05-04T16:59:41.628Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.16"
+        },
+        {
+            "date": "2015-05-04T17:01:08.448Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.17"
+        },
+        {
+            "date": "2015-05-04T17:01:47.046Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.18"
+        },
+        {
+            "date": "2015-05-04T17:12:47.447Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.19"
+        },
+        {
+            "date": "2015-05-27T18:31:58.891Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.20"
+        },
+        {
+            "date": "2015-05-27T20:01:21.933Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.21"
+        },
+        {
+            "date": "2015-05-27T20:04:40.528Z",
+            "author": {
+                "name": "Julien L",
+                "email": "julien@pagevamp.com"
+            },
+            "version": "0.0.22"
+>>>>>>> angular changes
         }
     ]
 }

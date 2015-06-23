@@ -5856,6 +5856,11 @@ a.pagevamp-theme .list-group-item-danger.active:focus {
 .pagevamp-theme .panel-danger > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #f3a8ad;
 }
+@media (max-width: 767px) {
+  .pagevamp-theme .panel-default {
+    margin: 0 5% !important;
+  }
+}
 .pagevamp-theme .embed-responsive {
   position: relative;
   display: block;

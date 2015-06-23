@@ -3,7 +3,7 @@
 		.border-radius(5px);
 		background-color:		#F8F9F9;
 		border:					1px solid #DDE1E3;
-		display:				table;
+		display:				div;
 		width:					100%;
 		margin-bottom:			25px;
 		
@@ -33,13 +33,18 @@
 			padding:	0;
 			&>img {
 				.border-radius-custom (5px, 0, 5px, 0);
-				width:	100%;
+				width:	72px;
 			}
 		}
 		& > .profile-details {
 			display:	table-cell;
 			vertical-align:	middle;
 			padding:	0 10px;
+			& > div {
+				& > small,& > strong {
+					.ellipsis();
+				}
+			}
 		}
 		& > .profile-actions {
 			display:	table-cell;

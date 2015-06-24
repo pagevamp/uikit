@@ -7495,7 +7495,7 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   border-radius: 5px;
   background-color: #F8F9F9;
   border: 1px solid #DDE1E3;
-  display: table;
+  display: div;
   width: 100%;
   margin-bottom: 25px;
 }
@@ -7528,12 +7528,18 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
-  width: 100%;
+  width: 72px;
 }
 .pagevamp-theme .admins .admin-profile > .profile-details {
   display: table-cell;
   vertical-align: middle;
   padding: 0 10px;
+}
+.pagevamp-theme .admins .admin-profile > .profile-details > div > small,
+.pagevamp-theme .admins .admin-profile > .profile-details > div > strong {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .pagevamp-theme .admins .admin-profile > .profile-actions {
   display: table-cell;

@@ -7362,7 +7362,7 @@ textarea.pagevamp-theme .payment.card-form .input-duo input {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.6);
+  border: 1px solid #ddd;
 }
 .pagevamp-theme div.photo {
   max-width: 100%;

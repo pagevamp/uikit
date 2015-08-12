@@ -283,6 +283,7 @@ th {
  *
  * https://github.com/lipis/bootstrap-social
  */
+  /* PMB Icon */
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -10151,5 +10152,20 @@ fieldset[disabled] .pagevamp-theme .btn-yahoo.active {
 .pagevamp-theme .btn-yahoo .badge {
   color: #720e9e;
   background-color: #ffffff;
+}
+.pagevamp-theme .powered {
+  position: relative;
+  font-size: 12px;
+  color: #5B5B5B;
+  padding: 8px 0 5px 40px;
+  display: inline-block;
+}
+.pagevamp-theme .powered:after {
+  content: 'A';
+  font-family: 'pmb';
+  font-size: 50px;
+  position: absolute;
+  left: 0;
+  top: -16px;
 }
 /*# sourceMappingURL=bootstrap.css.map */

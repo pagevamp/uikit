@@ -11,7 +11,7 @@ The AngularJS directives make it easy and scalable to use the various components
 ### global scope ###
 
 1. cd into `/bootstrap`
-2. Execute `grunt global --force`
+2. Execute `grunt public --force`
 3. Build exported in `/bootstrap/dist`
 4. 
 ### private scope ###

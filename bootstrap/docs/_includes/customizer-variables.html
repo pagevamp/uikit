@@ -4,24 +4,28 @@
 <p>Gray and brand colors for use across Bootstrap.</p>
 <div class="row">
   <div class="bs-customizer-input">
+    <label for="input-@default-color">@default-color</label>
+    <input id="input-@default-color" type="text" value="			 #6B747C" data-var="@default-color" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
     <label for="input-@gray-darker">@gray-darker</label>
-    <input id="input-@gray-darker" type="text" value="lighten(#000, 13.5%)" data-var="@gray-darker" class="form-control"/>
+    <input id="input-@gray-darker" type="text" value="darken(@default-color, 30%)" data-var="@gray-darker" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@gray-dark">@gray-dark</label>
-    <input id="input-@gray-dark" type="text" value="lighten(#000, 20%)" data-var="@gray-dark" class="form-control"/>
+    <input id="input-@gray-dark" type="text" value="darken(@default-color, 15%)" data-var="@gray-dark" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@gray">@gray</label>
-    <input id="input-@gray" type="text" value="lighten(#000, 33.5%)" data-var="@gray" class="form-control"/>
+    <input id="input-@gray" type="text" value="@default-color" data-var="@gray" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@gray-light">@gray-light</label>
-    <input id="input-@gray-light" type="text" value="lighten(#000, 46.7%)" data-var="@gray-light" class="form-control"/>
+    <input id="input-@gray-light" type="text" value="lighten(@default-color, 15%)" data-var="@gray-light" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@gray-lighter">@gray-lighter</label>
-    <input id="input-@gray-lighter" type="text" value="lighten(#000, 93.5%)" data-var="@gray-lighter" class="form-control"/>
+    <input id="input-@gray-lighter" type="text" value="lighten(@default-color, 30%)" data-var="@gray-lighter" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@brand-primary">@brand-primary</label>
@@ -43,18 +47,22 @@
     <label for="input-@brand-danger">@brand-danger</label>
     <input id="input-@brand-danger" type="text" value="#d9534f" data-var="@brand-danger" class="form-control"/>
   </div>
+  <div class="bs-customizer-input">
+    <label for="input-@brand-proposal">@brand-proposal</label>
+    <input id="input-@brand-proposal" type="text" value="		#337ab7" data-var="@brand-proposal" class="form-control"/>
+  </div>
 </div>
 <h2 id="scaffolding">Scaffolding</h2>
 <p>Settings for some of the most global styles.</p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@body-bg">@body-bg</label>
-    <input id="input-@body-bg" type="text" value="#fff" data-var="@body-bg" class="form-control"/>
+    <input id="input-@body-bg" type="text" value="#E9EAED" data-var="@body-bg" class="form-control"/>
     <p class="help-block">Background color for <code>&lt;body&gt;</code>.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@text-color">@text-color</label>
-    <input id="input-@text-color" type="text" value="@gray-dark" data-var="@text-color" class="form-control"/>
+    <input id="input-@text-color" type="text" value="@default-color" data-var="@text-color" class="form-control"/>
     <p class="help-block">Global text color on <code>&lt;body&gt;</code>.</p>
   </div>
   <div class="bs-customizer-input">
@@ -135,6 +143,10 @@
     <p class="help-block">Computed &quot;line-height&quot; (<code>font-size</code> * <code>line-height</code>) for use with <code>margin</code>, <code>padding</code>, etc.</p>
   </div>
   <div class="bs-customizer-input">
+    <label for="input-@avatar-height">@avatar-height</label>
+    <input id="input-@avatar-height" type="text" value="		  34px" data-var="@avatar-height" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
     <label for="input-@headings-font-family">@headings-font-family</label>
     <input id="input-@headings-font-family" type="text" value="inherit" data-var="@headings-font-family" class="form-control"/>
     <p class="help-block">By default, this inherits from the <code>&lt;body&gt;</code>.</p>
@@ -149,7 +161,15 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@headings-color">@headings-color</label>
-    <input id="input-@headings-color" type="text" value="inherit" data-var="@headings-color" class="form-control"/>
+    <input id="input-@headings-color" type="text" value="@gray-dark" data-var="@headings-color" class="form-control"/>
+  </div>
+</div>
+<h2 id="images">Images</h2>
+<div class="row">
+  <div class="bs-customizer-input">
+    <label for="input-@images-path">@images-path</label>
+    <input id="input-@images-path" type="text" value="&quot;../images/&quot;" data-var="@images-path" class="form-control"/>
+    <p class="help-block">Load images from this directory.</p>
   </div>
 </div>
 <h2 id="iconography">Iconography</h2>
@@ -252,7 +272,7 @@
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@table-cell-padding">@table-cell-padding</label>
-    <input id="input-@table-cell-padding" type="text" value="8px" data-var="@table-cell-padding" class="form-control"/>
+    <input id="input-@table-cell-padding" type="text" value="14px" data-var="@table-cell-padding" class="form-control"/>
     <p class="help-block">Padding for <code>&lt;th&gt;</code>s and <code>&lt;td&gt;</code>s.</p>
   </div>
   <div class="bs-customizer-input">
@@ -298,11 +318,23 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@btn-default-bg">@btn-default-bg</label>
-    <input id="input-@btn-default-bg" type="text" value="#fff" data-var="@btn-default-bg" class="form-control"/>
+    <input id="input-@btn-default-bg" type="text" value="transparent" data-var="@btn-default-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@btn-default-border">@btn-default-border</label>
     <input id="input-@btn-default-border" type="text" value="#ccc" data-var="@btn-default-border" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-faint-color">@btn-faint-color</label>
+    <input id="input-@btn-faint-color" type="text" value="#949FA7" data-var="@btn-faint-color" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-faint-bg">@btn-faint-bg</label>
+    <input id="input-@btn-faint-bg" type="text" value="transparent" data-var="@btn-faint-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-faint-border">@btn-faint-border</label>
+    <input id="input-@btn-faint-border" type="text" value="#E6E9EA" data-var="@btn-faint-border" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@btn-primary-color">@btn-primary-color</label>
@@ -310,11 +342,23 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@btn-primary-bg">@btn-primary-bg</label>
-    <input id="input-@btn-primary-bg" type="text" value="@brand-primary" data-var="@btn-primary-bg" class="form-control"/>
+    <input id="input-@btn-primary-bg" type="text" value="#42C964" data-var="@btn-primary-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@btn-primary-border">@btn-primary-border</label>
-    <input id="input-@btn-primary-border" type="text" value="darken(@btn-primary-bg, 5%)" data-var="@btn-primary-border" class="form-control"/>
+    <input id="input-@btn-primary-border" type="text" value="@btn-primary-bg" data-var="@btn-primary-border" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-secondary-color">@btn-secondary-color</label>
+    <input id="input-@btn-secondary-color" type="text" value="#fff" data-var="@btn-secondary-color" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-secondary-bg">@btn-secondary-bg</label>
+    <input id="input-@btn-secondary-bg" type="text" value="#6586E2" data-var="@btn-secondary-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-secondary-border">@btn-secondary-border</label>
+    <input id="input-@btn-secondary-border" type="text" value="@btn-secondary-bg" data-var="@btn-secondary-border" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@btn-success-color">@btn-success-color</label>
@@ -358,23 +402,77 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@btn-danger-bg">@btn-danger-bg</label>
-    <input id="input-@btn-danger-bg" type="text" value="@brand-danger" data-var="@btn-danger-bg" class="form-control"/>
+    <input id="input-@btn-danger-bg" type="text" value="#FF5F6B" data-var="@btn-danger-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@btn-danger-border">@btn-danger-border</label>
-    <input id="input-@btn-danger-border" type="text" value="darken(@btn-danger-bg, 5%)" data-var="@btn-danger-border" class="form-control"/>
+    <input id="input-@btn-danger-border" type="text" value="@btn-danger-bg" data-var="@btn-danger-border" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@btn-link-disabled-color">@btn-link-disabled-color</label>
     <input id="input-@btn-link-disabled-color" type="text" value="@gray-light" data-var="@btn-link-disabled-color" class="form-control"/>
   </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-tab-color">@btn-tab-color</label>
+    <input id="input-@btn-tab-color" type="text" value="	#919CA4" data-var="@btn-tab-color" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-tab-bg">@btn-tab-bg</label>
+    <input id="input-@btn-tab-bg" type="text" value="	#FFFFFF" data-var="@btn-tab-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-tab-border">@btn-tab-border</label>
+    <input id="input-@btn-tab-border" type="text" value="	#BDBDBD" data-var="@btn-tab-border" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-tab-width">@btn-tab-width</label>
+    <input id="input-@btn-tab-width" type="text" value="		150px" data-var="@btn-tab-width" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-tab-height">@btn-tab-height</label>
+    <input id="input-@btn-tab-height" type="text" value="	103px" data-var="@btn-tab-height" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-tab-active-color">@btn-tab-active-color</label>
+    <input id="input-@btn-tab-active-color" type="text" value="#FFFFFF" data-var="@btn-tab-active-color" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-tab-active-bg">@btn-tab-active-bg</label>
+    <input id="input-@btn-tab-active-bg" type="text" value="#6586E2" data-var="@btn-tab-active-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-tab-active-border">@btn-tab-active-border</label>
+    <input id="input-@btn-tab-active-border" type="text" value="#506EC2" data-var="@btn-tab-active-border" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-vtab-active-color">@btn-vtab-active-color</label>
+    <input id="input-@btn-vtab-active-color" type="text" value="#6586E2" data-var="@btn-vtab-active-color" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-vtab-active-bg">@btn-vtab-active-bg</label>
+    <input id="input-@btn-vtab-active-bg" type="text" value="#ffffff" data-var="@btn-vtab-active-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-vtab-color">@btn-vtab-color</label>
+    <input id="input-@btn-vtab-color" type="text" value="		#919CA4" data-var="@btn-vtab-color" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-vtab-bg">@btn-vtab-bg</label>
+    <input id="input-@btn-vtab-bg" type="text" value="		#F3F3F3" data-var="@btn-vtab-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@btn-vtab-border">@btn-vtab-border</label>
+    <input id="input-@btn-vtab-border" type="text" value="		#E0E4E7" data-var="@btn-vtab-border" class="form-control"/>
+  </div>
 </div>
+<h2 id="switch-button-(new,-for-pagevamp)">Switch button (new, for pagevamp)</h2>
+<p></p>
 <h2 id="forms">Forms</h2>
 <p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@input-bg">@input-bg</label>
-    <input id="input-@input-bg" type="text" value="#fff" data-var="@input-bg" class="form-control"/>
+    <input id="input-@input-bg" type="text" value="#F2F1F5" data-var="@input-bg" class="form-control"/>
     <p class="help-block"><code>&lt;input&gt;</code> background color</p>
   </div>
   <div class="bs-customizer-input">
@@ -451,12 +549,12 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-border">@dropdown-border</label>
-    <input id="input-@dropdown-border" type="text" value="rgba(0,0,0,.15)" data-var="@dropdown-border" class="form-control"/>
+    <input id="input-@dropdown-border" type="text" value="rgba(0,0,0,.05)" data-var="@dropdown-border" class="form-control"/>
     <p class="help-block">Dropdown menu <code>border-color</code>.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-fallback-border">@dropdown-fallback-border</label>
-    <input id="input-@dropdown-fallback-border" type="text" value="#ccc" data-var="@dropdown-fallback-border" class="form-control"/>
+    <input id="input-@dropdown-fallback-border" type="text" value="#E6E9EA" data-var="@dropdown-fallback-border" class="form-control"/>
     <p class="help-block">Dropdown menu <code>border-color</code> <strong>for IE8</strong>.</p>
   </div>
   <div class="bs-customizer-input">
@@ -638,15 +736,11 @@
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@navbar-height">@navbar-height</label>
-    <input id="input-@navbar-height" type="text" value="50px" data-var="@navbar-height" class="form-control"/>
+    <input id="input-@navbar-height" type="text" value="60px" data-var="@navbar-height" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-margin-bottom">@navbar-margin-bottom</label>
     <input id="input-@navbar-margin-bottom" type="text" value="@line-height-computed" data-var="@navbar-margin-bottom" class="form-control"/>
-  </div>
-  <div class="bs-customizer-input">
-    <label for="input-@navbar-border-radius">@navbar-border-radius</label>
-    <input id="input-@navbar-border-radius" type="text" value="@border-radius-base" data-var="@navbar-border-radius" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-padding-horizontal">@navbar-padding-horizontal</label>
@@ -662,11 +756,11 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-color">@navbar-default-color</label>
-    <input id="input-@navbar-default-color" type="text" value="#777" data-var="@navbar-default-color" class="form-control"/>
+    <input id="input-@navbar-default-color" type="text" value="#FFF" data-var="@navbar-default-color" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-bg">@navbar-default-bg</label>
-    <input id="input-@navbar-default-bg" type="text" value="#f8f8f8" data-var="@navbar-default-bg" class="form-control"/>
+    <input id="input-@navbar-default-bg" type="text" value="#272C43" data-var="@navbar-default-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-border">@navbar-default-border</label>
@@ -674,27 +768,27 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-link-color">@navbar-default-link-color</label>
-    <input id="input-@navbar-default-link-color" type="text" value="#777" data-var="@navbar-default-link-color" class="form-control"/>
+    <input id="input-@navbar-default-link-color" type="text" value="#FFF" data-var="@navbar-default-link-color" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-link-hover-color">@navbar-default-link-hover-color</label>
-    <input id="input-@navbar-default-link-hover-color" type="text" value="#333" data-var="@navbar-default-link-hover-color" class="form-control"/>
+    <input id="input-@navbar-default-link-hover-color" type="text" value="@navbar-default-link-color" data-var="@navbar-default-link-hover-color" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-link-hover-bg">@navbar-default-link-hover-bg</label>
-    <input id="input-@navbar-default-link-hover-bg" type="text" value="transparent" data-var="@navbar-default-link-hover-bg" class="form-control"/>
+    <input id="input-@navbar-default-link-hover-bg" type="text" value="#1A1E34" data-var="@navbar-default-link-hover-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-link-active-color">@navbar-default-link-active-color</label>
-    <input id="input-@navbar-default-link-active-color" type="text" value="#555" data-var="@navbar-default-link-active-color" class="form-control"/>
+    <input id="input-@navbar-default-link-active-color" type="text" value="#FFF" data-var="@navbar-default-link-active-color" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-link-active-bg">@navbar-default-link-active-bg</label>
-    <input id="input-@navbar-default-link-active-bg" type="text" value="darken(@navbar-default-bg, 6.5%)" data-var="@navbar-default-link-active-bg" class="form-control"/>
+    <input id="input-@navbar-default-link-active-bg" type="text" value="#1A1E34" data-var="@navbar-default-link-active-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-link-disabled-color">@navbar-default-link-disabled-color</label>
-    <input id="input-@navbar-default-link-disabled-color" type="text" value="#ccc" data-var="@navbar-default-link-disabled-color" class="form-control"/>
+    <input id="input-@navbar-default-link-disabled-color" type="text" value="darken(@navbar-default-link-color, 20%)" data-var="@navbar-default-link-disabled-color" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-link-disabled-bg">@navbar-default-link-disabled-bg</label>
@@ -706,7 +800,7 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-brand-hover-color">@navbar-default-brand-hover-color</label>
-    <input id="input-@navbar-default-brand-hover-color" type="text" value="darken(@navbar-default-brand-color, 10%)" data-var="@navbar-default-brand-hover-color" class="form-control"/>
+    <input id="input-@navbar-default-brand-hover-color" type="text" value="darken(@navbar-default-brand-color, 50%)" data-var="@navbar-default-brand-hover-color" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@navbar-default-brand-hover-bg">@navbar-default-brand-hover-bg</label>
@@ -798,10 +892,6 @@
     <input id="input-@nav-link-padding" type="text" value="10px 15px" data-var="@nav-link-padding" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
-    <label for="input-@nav-link-hover-bg">@nav-link-hover-bg</label>
-    <input id="input-@nav-link-hover-bg" type="text" value="@gray-lighter" data-var="@nav-link-hover-bg" class="form-control"/>
-  </div>
-  <div class="bs-customizer-input">
     <label for="input-@nav-disabled-link-color">@nav-disabled-link-color</label>
     <input id="input-@nav-disabled-link-color" type="text" value="@gray-light" data-var="@nav-disabled-link-color" class="form-control"/>
   </div>
@@ -818,11 +908,31 @@
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@nav-tabs-border-color">@nav-tabs-border-color</label>
-    <input id="input-@nav-tabs-border-color" type="text" value="#ddd" data-var="@nav-tabs-border-color" class="form-control"/>
+    <input id="input-@nav-tabs-border-color" type="text" value="#D1D6DC" data-var="@nav-tabs-border-color" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@nav-tabs-link-hover-border-color">@nav-tabs-link-hover-border-color</label>
     <input id="input-@nav-tabs-link-hover-border-color" type="text" value="@gray-lighter" data-var="@nav-tabs-link-hover-border-color" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@nav-tabs-link-bg">@nav-tabs-link-bg</label>
+    <input id="input-@nav-tabs-link-bg" type="text" value="				#F1F1F1" data-var="@nav-tabs-link-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@nav-link-hover-bg">@nav-link-hover-bg</label>
+    <input id="input-@nav-link-hover-bg" type="text" value="lighten(@nav-tabs-link-bg, 2%)" data-var="@nav-link-hover-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@nav-tabs-link-color">@nav-tabs-link-color</label>
+    <input id="input-@nav-tabs-link-color" type="text" value="				#6B747C" data-var="@nav-tabs-link-color" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@nav-tabs-active-link-bg">@nav-tabs-active-link-bg</label>
+    <input id="input-@nav-tabs-active-link-bg" type="text" value="		#fff" data-var="@nav-tabs-active-link-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@nav-tabs-active-link-color">@nav-tabs-active-link-color</label>
+    <input id="input-@nav-tabs-active-link-color" type="text" value="		@gray" data-var="@nav-tabs-active-link-color" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@nav-tabs-active-link-hover-bg">@nav-tabs-active-link-hover-bg</label>
@@ -973,15 +1083,15 @@
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@state-success-text">@state-success-text</label>
-    <input id="input-@state-success-text" type="text" value="#3c763d" data-var="@state-success-text" class="form-control"/>
+    <input id="input-@state-success-text" type="text" value="#5DA06E" data-var="@state-success-text" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@state-success-bg">@state-success-bg</label>
-    <input id="input-@state-success-bg" type="text" value="#dff0d8" data-var="@state-success-bg" class="form-control"/>
+    <input id="input-@state-success-bg" type="text" value="#E4F8E8" data-var="@state-success-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@state-success-border">@state-success-border</label>
-    <input id="input-@state-success-border" type="text" value="darken(spin(@state-success-bg, -10), 5%)" data-var="@state-success-border" class="form-control"/>
+    <input id="input-@state-success-border" type="text" value="#B1E5BF" data-var="@state-success-border" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@state-info-text">@state-info-text</label>
@@ -997,27 +1107,27 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@state-warning-text">@state-warning-text</label>
-    <input id="input-@state-warning-text" type="text" value="#8a6d3b" data-var="@state-warning-text" class="form-control"/>
+    <input id="input-@state-warning-text" type="text" value="#A8A877" data-var="@state-warning-text" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@state-warning-bg">@state-warning-bg</label>
-    <input id="input-@state-warning-bg" type="text" value="#fcf8e3" data-var="@state-warning-bg" class="form-control"/>
+    <input id="input-@state-warning-bg" type="text" value="#FDFDD4" data-var="@state-warning-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@state-warning-border">@state-warning-border</label>
-    <input id="input-@state-warning-border" type="text" value="darken(spin(@state-warning-bg, -10), 5%)" data-var="@state-warning-border" class="form-control"/>
+    <input id="input-@state-warning-border" type="text" value="#E5E5B2" data-var="@state-warning-border" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@state-danger-text">@state-danger-text</label>
-    <input id="input-@state-danger-text" type="text" value="#a94442" data-var="@state-danger-text" class="form-control"/>
+    <input id="input-@state-danger-text" type="text" value="#A74E55" data-var="@state-danger-text" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@state-danger-bg">@state-danger-bg</label>
-    <input id="input-@state-danger-bg" type="text" value="#f2dede" data-var="@state-danger-bg" class="form-control"/>
+    <input id="input-@state-danger-bg" type="text" value="#FFD9DC" data-var="@state-danger-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@state-danger-border">@state-danger-border</label>
-    <input id="input-@state-danger-border" type="text" value="darken(spin(@state-danger-bg, -10), 5%)" data-var="@state-danger-border" class="form-control"/>
+    <input id="input-@state-danger-border" type="text" value="#F3A8AD" data-var="@state-danger-border" class="form-control"/>
   </div>
 </div>
 <h2 id="tooltips">Tooltips</h2>
@@ -1407,6 +1517,14 @@
     <input id="input-@panel-heading-padding" type="text" value="10px 15px" data-var="@panel-heading-padding" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
+    <label for="input-@panel-heading-text">@panel-heading-text</label>
+    <input id="input-@panel-heading-text" type="text" value="@gray-dark" data-var="@panel-heading-text" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@panel-heading-text-active">@panel-heading-text-active</label>
+    <input id="input-@panel-heading-text-active" type="text" value="#6586E2" data-var="@panel-heading-text-active" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
     <label for="input-@panel-footer-padding">@panel-footer-padding</label>
     <input id="input-@panel-footer-padding" type="text" value="@panel-heading-padding" data-var="@panel-footer-padding" class="form-control"/>
   </div>
@@ -1416,7 +1534,7 @@
   </div>
   <div class="bs-customizer-input">
     <label for="input-@panel-inner-border">@panel-inner-border</label>
-    <input id="input-@panel-inner-border" type="text" value="#ddd" data-var="@panel-inner-border" class="form-control"/>
+    <input id="input-@panel-inner-border" type="text" value="#E0E4E7" data-var="@panel-inner-border" class="form-control"/>
     <p class="help-block">Border color for elements within panels</p>
   </div>
   <div class="bs-customizer-input">
@@ -1434,6 +1552,10 @@
   <div class="bs-customizer-input">
     <label for="input-@panel-default-heading-bg">@panel-default-heading-bg</label>
     <input id="input-@panel-default-heading-bg" type="text" value="#f5f5f5" data-var="@panel-default-heading-bg" class="form-control"/>
+  </div>
+  <div class="bs-customizer-input">
+    <label for="input-@panel-accordion-heading-bg">@panel-accordion-heading-bg</label>
+    <input id="input-@panel-accordion-heading-bg" type="text" value="transparent" data-var="@panel-accordion-heading-bg" class="form-control"/>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@panel-primary-text">@panel-primary-text</label>

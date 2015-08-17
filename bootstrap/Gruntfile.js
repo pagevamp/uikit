@@ -467,7 +467,7 @@ module.exports = function (grunt) {
 	
 
 	// Default task.
-	grunt.registerTask('default', ['test', 'dist', 'build-glyphicons-data', 'build-customizer']);
+	grunt.registerTask('default', ['test', 'build-glyphicons-data', 'build-customizer']);
 
 	// Version numbering task.
 	// grunt change-version-number --oldver=A.B.C --newver=X.Y.Z

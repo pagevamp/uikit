@@ -1,43 +1,31 @@
-
+﻿ 
 /* Photo without label */
 img.photo {
 	max-width:	100%;
 	.border-radius(3px);
-	border:				1px solid #ddd;
+	border:				1px solid rgba(0,0,0,0.6);
 }
 
 /* Photo with label */
 div.photo {
 	@radius:		3px;
 	max-width:		100%;
-	position:		relative;
 	.border-radius(@radius);
 	
-	border:				1px solid #ddd;
+	border:				1px solid rgba(0,0,0,0.6);
 	
 	/* No actions */
 	&>img {
-		/*position:	absolute;
-		left:		0;
-		top:		0;*/
 		width:		100%;
-		/*.border-radius(@radius);*/
 		.border-radius-custom (@radius, @radius, 0, 0);
-		cursor: -webkit-zoom-in;
 	}
-
-	a {
-		&>img {
-			/*position:	absolute;
-			left:		0;
-			top:		0;*/
+	&>a.fancybox{
+		width:		100%;
+		img {
 			width:		100%;
-			/*.border-radius(@radius);*/
 			.border-radius-custom (@radius, @radius, 0, 0);
-			cursor: -webkit-zoom-in;
 		}
 	}
-
 	
 	/* With actions */
 	&>div.actions {
@@ -50,7 +38,7 @@ div.photo {
 		}
 		&>div {
 			position:	absolute;
-			bottom:		60px;
+			top:		6px;
 			left:		0;
 			display:	none;
 		}
@@ -65,19 +53,12 @@ div.photo {
 	}
 	
 	&>div.text {
-		/*position:	absolute;
-		left:		0;
-		bottom:		0;*/
 		width:		100%;
-		padding:	8px;
-		position: absolute;
-		bottom: 0;
+		padding:	4px;
 		text-align:	justify;
-		background-color:	rgba(0,0,0,0.4);
-		/*.ellipsis();*/
-		/*.border-radius(@radius);*/
-		/*.border-radius-custom (0, 0, 2px, 2px);*/
-		font-size:		13px;
+		background-color:	rgba(0,0,0,0.6);
+		.ellipsis();
+		font-size:		11px;
 		font-weight:	normal;
 		.text-inset(#ffffff, #000000);
 		
@@ -86,26 +67,7 @@ div.photo {
 			text-shadow: 	0 0 0 transparent;
 			color: 			@default-color;
 		}
-		a {
-			.ellipsis();
-			display: block;
-		}
-		
-		/* Multi-line ellipsis hack 
-		position: relative;
-		height:		40px;*/
 	}
-	/* Multi-line ellipsis hack 
-	&>div:after {
-		content: "";
-		text-align: right;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		width: 70%;
-		height: 1.2em;
-		background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.6) 50%);
-	}*/
 }
 
 /* 

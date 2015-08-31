@@ -4,6 +4,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300italic,600,600italic,700italic&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic);
 .btn-default,
 .btn-primary,
 .btn-secondary,

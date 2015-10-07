@@ -2117,6 +2117,9 @@ a.pagevamp-theme .bg-danger:hover {
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #dddddd;
+  white-space: normal;
+  -ms-word-break: break-all;
+  word-break: break-all;
 }
 .pagevamp-theme .table > thead > tr > th {
   vertical-align: bottom;
@@ -6503,52 +6506,52 @@ button.pagevamp-theme .close {
 }
 .pagevamp-theme .clearfix:before,
 .pagevamp-theme .clearfix:after,
-.pagevamp-theme .dl-horizontal dd:before,
-.pagevamp-theme .dl-horizontal dd:after,
-.pagevamp-theme .container:before,
-.pagevamp-theme .container:after,
-.pagevamp-theme .container-fluid:before,
-.pagevamp-theme .container-fluid:after,
-.pagevamp-theme .row:before,
-.pagevamp-theme .row:after,
-.pagevamp-theme .form-horizontal .form-group:before,
-.pagevamp-theme .form-horizontal .form-group:after,
-.pagevamp-theme .btn-toolbar:before,
-.pagevamp-theme .btn-toolbar:after,
-.pagevamp-theme .btn-group-vertical > .btn-group:before,
-.pagevamp-theme .btn-group-vertical > .btn-group:after,
-.pagevamp-theme .nav:before,
-.pagevamp-theme .nav:after,
-.pagevamp-theme .navbar:before,
-.pagevamp-theme .navbar:after,
-.pagevamp-theme .navbar-header:before,
-.pagevamp-theme .navbar-header:after,
-.pagevamp-theme .navbar-collapse:before,
-.pagevamp-theme .navbar-collapse:after,
-.pagevamp-theme .pager:before,
-.pagevamp-theme .pager:after,
-.pagevamp-theme .panel-body:before,
-.pagevamp-theme .panel-body:after,
-.pagevamp-theme .modal-footer:before,
-.pagevamp-theme .modal-footer:after {
+.pagevamp-theme .pagevamp-theme .dl-horizontal dd:before,
+.pagevamp-theme .pagevamp-theme .dl-horizontal dd:after,
+.pagevamp-theme .pagevamp-theme .container:before,
+.pagevamp-theme .pagevamp-theme .container:after,
+.pagevamp-theme .pagevamp-theme .container-fluid:before,
+.pagevamp-theme .pagevamp-theme .container-fluid:after,
+.pagevamp-theme .pagevamp-theme .row:before,
+.pagevamp-theme .pagevamp-theme .row:after,
+.pagevamp-theme .pagevamp-theme .form-horizontal .form-group:before,
+.pagevamp-theme .pagevamp-theme .form-horizontal .form-group:after,
+.pagevamp-theme .pagevamp-theme .btn-toolbar:before,
+.pagevamp-theme .pagevamp-theme .btn-toolbar:after,
+.pagevamp-theme .pagevamp-theme .btn-group-vertical > .btn-group:before,
+.pagevamp-theme .pagevamp-theme .btn-group-vertical > .btn-group:after,
+.pagevamp-theme .pagevamp-theme .nav:before,
+.pagevamp-theme .pagevamp-theme .nav:after,
+.pagevamp-theme .pagevamp-theme .navbar:before,
+.pagevamp-theme .pagevamp-theme .navbar:after,
+.pagevamp-theme .pagevamp-theme .navbar-header:before,
+.pagevamp-theme .pagevamp-theme .navbar-header:after,
+.pagevamp-theme .pagevamp-theme .navbar-collapse:before,
+.pagevamp-theme .pagevamp-theme .navbar-collapse:after,
+.pagevamp-theme .pagevamp-theme .pager:before,
+.pagevamp-theme .pagevamp-theme .pager:after,
+.pagevamp-theme .pagevamp-theme .panel-body:before,
+.pagevamp-theme .pagevamp-theme .panel-body:after,
+.pagevamp-theme .pagevamp-theme .modal-footer:before,
+.pagevamp-theme .pagevamp-theme .modal-footer:after {
   content: " ";
   display: table;
 }
 .pagevamp-theme .clearfix:after,
-.pagevamp-theme .dl-horizontal dd:after,
-.pagevamp-theme .container:after,
-.pagevamp-theme .container-fluid:after,
-.pagevamp-theme .row:after,
-.pagevamp-theme .form-horizontal .form-group:after,
-.pagevamp-theme .btn-toolbar:after,
-.pagevamp-theme .btn-group-vertical > .btn-group:after,
-.pagevamp-theme .nav:after,
-.pagevamp-theme .navbar:after,
-.pagevamp-theme .navbar-header:after,
-.pagevamp-theme .navbar-collapse:after,
-.pagevamp-theme .pager:after,
-.pagevamp-theme .panel-body:after,
-.pagevamp-theme .modal-footer:after {
+.pagevamp-theme .pagevamp-theme .dl-horizontal dd:after,
+.pagevamp-theme .pagevamp-theme .container:after,
+.pagevamp-theme .pagevamp-theme .container-fluid:after,
+.pagevamp-theme .pagevamp-theme .row:after,
+.pagevamp-theme .pagevamp-theme .form-horizontal .form-group:after,
+.pagevamp-theme .pagevamp-theme .btn-toolbar:after,
+.pagevamp-theme .pagevamp-theme .btn-group-vertical > .btn-group:after,
+.pagevamp-theme .pagevamp-theme .nav:after,
+.pagevamp-theme .pagevamp-theme .navbar:after,
+.pagevamp-theme .pagevamp-theme .navbar-header:after,
+.pagevamp-theme .pagevamp-theme .navbar-collapse:after,
+.pagevamp-theme .pagevamp-theme .pager:after,
+.pagevamp-theme .pagevamp-theme .panel-body:after,
+.pagevamp-theme .pagevamp-theme .modal-footer:after {
   clear: both;
 }
 .pagevamp-theme .center-block {
